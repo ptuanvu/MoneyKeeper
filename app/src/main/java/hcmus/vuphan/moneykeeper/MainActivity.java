@@ -7,10 +7,16 @@ import android.widget.TextView;
 
 import com.orm.SugarContext;
 
+import hcmus.vuphan.moneykeeper.scences.CameraFragment;
+
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvShowStatus;
+
     FrameLayout contentFrameLayout;
+    CameraFragment cameraFragment;
+
+    public final static String KEY = "camera_instance_restore";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,20 +29,19 @@ public class MainActivity extends AppCompatActivity {
         // Khoi tao ham su kien
         CreateListenerEvent();
 
-        tvShowStatus = (TextView) findViewById(R.id.tvShowStatus);
-        Book a = new Book("ABC", "My Book Test", "Phan Vu");
-        a.save();
 
-        tvShowStatus.setText(Book.listAll(Book.class).get(0).toString());
+        cameraFragment = CameraFragment.createInstance(this);
+        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, cameraFragment).commit();
     }
 
     private void CreateListenerEvent() {
 
-        
     }
 
     private void InitID() {
         contentFrameLayout = (FrameLayout) findViewById(R.id.contentFrameLayout);
 
     }
+
+
 }

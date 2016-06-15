@@ -84,6 +84,10 @@
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_big_media_narrow.xml"
     },
     {
+        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/layout/camera_layout.xml",
+        "source": "/home/monster/Downloads/MoneyKeeper/app/src/main/res/layout/camera_layout.xml"
+    },
+    {
         "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_media_action.xml"
     },
