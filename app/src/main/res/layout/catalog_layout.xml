@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ListView
+        android:id="@+id/lvShow"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></ListView>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input Text Here"
+        android:textAlignment="center"
+        android:id="@+id/edtUserInput"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCreate"
+        android:padding="5dp"
+        android:text="Create"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRead"
+        android:padding="5dp"
+        android:text="Read"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnUpdate"
+        android:padding="5dp"
+        android:text="Update"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDelete"
+        android:padding="5dp"
+        android:text="Delete"/>
+
+</LinearLayout>

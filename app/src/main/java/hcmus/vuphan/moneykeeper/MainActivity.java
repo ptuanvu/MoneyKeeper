@@ -8,12 +8,14 @@ import android.widget.TextView;
 import com.orm.SugarContext;
 
 import hcmus.vuphan.moneykeeper.scences.CameraFragment;
+import hcmus.vuphan.moneykeeper.scences.CatalogFragment;
 
 public class MainActivity extends AppCompatActivity {
 
 
     FrameLayout contentFrameLayout;
     CameraFragment cameraFragment;
+    CatalogFragment catalogFragment;
 
     public final static String KEY = "camera_instance_restore";
 
@@ -30,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
         CreateListenerEvent();
 
 
-        cameraFragment = CameraFragment.createInstance(this);
-        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, cameraFragment).commit();
+
+        catalogFragment = CatalogFragment.createFragment(this);
+        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, catalogFragment).commit();
     }
 
     private void CreateListenerEvent() {

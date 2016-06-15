@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Title"/>
+
+    <EditText
+        android:id="@+id/edtParrent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Parrent (optional)"/>
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="4"
+        android:hint="Enter Description"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="OK"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Cancel"/>
+
+    </LinearLayout>
+
+</LinearLayout>

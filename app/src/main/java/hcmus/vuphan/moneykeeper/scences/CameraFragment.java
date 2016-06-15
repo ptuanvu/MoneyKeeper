@@ -166,7 +166,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-               
+
             }
 
             tvURL.setText(fileUri.toString());
