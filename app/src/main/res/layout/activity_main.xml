@@ -9,6 +9,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="hcmus.vuphan.moneykeeper.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/contentFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
     <TextView
         android:id="@+id/tvShowStatus"
         android:layout_width="wrap_content"
