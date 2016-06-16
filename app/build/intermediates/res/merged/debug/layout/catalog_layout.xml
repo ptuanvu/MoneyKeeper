@@ -1,47 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    android:gravity="center|top">
 
-    <ListView
-        android:id="@+id/lvShow"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcvCatalogs"
         android:layout_width="match_parent"
-        android:layout_height="200dp"></ListView>
-    
-    <EditText
-        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabCreate"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Input Text Here"
-        android:textAlignment="center"
-        android:id="@+id/edtUserInput"/>
+        android:layout_gravity="bottom|end"
+        android:scaleType="fitStart"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_add_white_24dp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnCreate"
-        android:padding="5dp"
-        android:text="Create"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnRead"
-        android:padding="5dp"
-        android:text="Read"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnUpdate"
-        android:padding="5dp"
-        android:text="Update"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnDelete"
-        android:padding="5dp"
-        android:text="Delete"/>
-
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

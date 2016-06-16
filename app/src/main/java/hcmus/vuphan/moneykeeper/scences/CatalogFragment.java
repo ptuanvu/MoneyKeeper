@@ -1,9 +1,13 @@
 package hcmus.vuphan.moneykeeper.scences;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +15,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import hcmus.vuphan.moneykeeper.MainActivity;
 import hcmus.vuphan.moneykeeper.R;
+import hcmus.vuphan.moneykeeper.adapters.CatalogAdapter;
 import hcmus.vuphan.moneykeeper.dialogs.CreateCatalogDialog;
 import hcmus.vuphan.moneykeeper.model.Catalog;
 
@@ -20,13 +27,14 @@ import hcmus.vuphan.moneykeeper.model.Catalog;
  * Created by monster on 15/06/2016.
  */
 public class CatalogFragment extends Fragment implements View.OnClickListener {
-    Context context;
+    static Context context;
 
-    // Cac view co trong layout
-    Button btnCreate, btnRead, btnUpdate, btnDelete;
-    EditText edtUserInput;
+    //Cac view elements
+    FloatingActionButton fabCreate;
+    static RecyclerView rcvCatalogs;
+    static FragmentManager fragmentManager;
 
-    //
+    RecyclerView.LayoutManager layoutManager;
 
     public void setContext(Context context) {
         this.context = context;
@@ -43,37 +51,32 @@ public class CatalogFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.catalog_layout, container, false);
-        btnCreate = (Button) view.findViewById(R.id.btnCreate);
-        btnDelete = (Button) view.findViewById(R.id.btnDelete);
-        btnRead = (Button) view.findViewById(R.id.btnRead);
-        btnUpdate = (Button) view.findViewById(R.id.btnUpdate);
-        edtUserInput = (EditText) view.findViewById(R.id.edtUserInput);
 
-        btnCreate.setOnClickListener(this);
-        btnDelete.setOnClickListener(this);
-        btnUpdate.setOnClickListener(this);
-        btnRead.setOnClickListener(this);
+        rcvCatalogs = (RecyclerView) view.findViewById(R.id.rcvCatalogs);
+        fabCreate = (FloatingActionButton) view.findViewById(R.id.fabCreate);
+
+        rcvCatalogs.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(context);
+        rcvCatalogs.setLayoutManager(layoutManager);
+
+        RefreshRecyclerViewCatalogs();
+        fabCreate.setOnClickListener(this);
+        fragmentManager = getFragmentManager();
 
         return view;
+    }
+
+    public static void RefreshRecyclerViewCatalogs() {
+        ArrayList catalogs = (ArrayList) Catalog.listAll(Catalog.class);
+        CatalogAdapter catalogAdapter = new CatalogAdapter(catalogs, context);
+        rcvCatalogs.setAdapter(catalogAdapter);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btnCreate:
+            case R.id.fabCreate:
                 OnCreateCatalog();
-                break;
-            case R.id.btnDelete:
-                if (edtUserInput.getText().toString() != "")
-                    OnDeleteCatalog(edtUserInput.getText().toString());
-                break;
-            case R.id.btnUpdate:
-                if (edtUserInput.getText().toString() != "") {
-                    OnUpdateCatalog(edtUserInput.getText().toString());
-                }
-                break;
-            case R.id.btnRead:
-                OnReadCatalog();
                 break;
         }
     }
@@ -99,5 +102,10 @@ public class CatalogFragment extends Fragment implements View.OnClickListener {
         createCatalogDialog.show(getFragmentManager(), "Create Catalog Dialog");
 
         Toast.makeText(context, "Create Catalog Success", Toast.LENGTH_SHORT).show();
+    }
+
+    public static void ShowCreateDialog(Catalog c) {
+        CreateCatalogDialog createCatalogDialog = CreateCatalogDialog.createInstance(c);
+        createCatalogDialog.show(fragmentManager, "dialog");
     }
 }

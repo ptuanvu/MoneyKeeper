@@ -36,6 +36,10 @@
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_cab_background_top_material.xml"
     },
     {
+        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
+        "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/drawable/design_snackbar_background.xml"
+    },
+    {
         "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_seekbar_thumb_material.xml"
     },
@@ -52,6 +56,10 @@
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_btn_check_material.xml"
     },
     {
+        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/shopping_cart_grey.png",
+        "source": "/home/monster/Downloads/MoneyKeeper/app/src/main/res/drawable/shopping_cart_grey.png"
+    },
+    {
         "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_ratingbar_indicator_material.xml"
     },
@@ -62,6 +70,10 @@
     {
         "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
+        "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/drawable/design_fab_background.xml"
     },
     {
         "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
@@ -78,6 +90,10 @@
     {
         "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/ic_add_white_24dp.png",
+        "source": "/home/monster/Downloads/MoneyKeeper/app/src/main/res/drawable/ic_add_white_24dp.png"
     },
     {
         "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",

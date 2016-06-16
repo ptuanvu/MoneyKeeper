@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvCatalogItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_done_all_24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:contentDescription="Item Icon"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                android:id="@+id/imbIcon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTitle"
+                android:layout_toRightOf="@+id/imbIcon"
+                android:layout_alignParentTop="true"
+                android:textSize="22sp"
+                android:text="Xe co"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDescription"
+                android:layout_below="@+id/tvTitle"
+                android:textStyle="italic"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/imbIcon"
+                android:text="Cac thu lien quan toi xe co"/>
+
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_cancel_24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:contentDescription="Item Icon"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                android:id="@+id/imbDelete"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

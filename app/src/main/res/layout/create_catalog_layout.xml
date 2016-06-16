@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <EditText
         android:id="@+id/edtTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Title"/>
+        android:hint="Enter Title" >
 
-    <EditText
-        android:id="@+id/edtParrent"
+        <requestFocus ></requestFocus>
+
+    </EditText>
+
+    <Spinner
+        android:id="@+id/spnParrent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Parrent (optional)"/>
+        android:layout_height="wrap_content"></Spinner>
 
     <EditText
         android:id="@+id/edtDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="4"
+        android:gravity="left|top"
         android:hint="Enter Description"/>
 
 
