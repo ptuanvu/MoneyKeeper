@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import hcmus.vuphan.moneykeeper.MainActivity;
 import hcmus.vuphan.moneykeeper.R;
@@ -67,7 +68,7 @@ public class CatalogFragment extends Fragment implements View.OnClickListener {
     }
 
     public static void RefreshRecyclerViewCatalogs() {
-        ArrayList catalogs = (ArrayList) Catalog.listAll(Catalog.class);
+        ArrayList catalogs = GetAllCatalogs();
         CatalogAdapter catalogAdapter = new CatalogAdapter(catalogs, context);
         rcvCatalogs.setAdapter(catalogAdapter);
     }
@@ -107,5 +108,18 @@ public class CatalogFragment extends Fragment implements View.OnClickListener {
     public static void ShowCreateDialog(Catalog c) {
         CreateCatalogDialog createCatalogDialog = CreateCatalogDialog.createInstance(c);
         createCatalogDialog.show(fragmentManager, "dialog");
+    }
+
+    public static ArrayList<Catalog> GetAllCatalogs() {
+        ArrayList<Catalog> result = new ArrayList<Catalog>();
+
+        List<Catalog> parents = Catalog.find(Catalog.class, "id_parrent = ?", "-1");
+        for (Catalog parent: parents
+             ) {
+            List<Catalog> childs = Catalog.find(Catalog.class, "id_parrent = ?" , String.valueOf(parent.getId()));
+            result.add(parent);
+            result.addAll(childs);
+        }
+        return result;
     }
 }
