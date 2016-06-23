@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        catalogFragment = CatalogFragment.createFragment(this);
-        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, catalogFragment).commit();
+        cameraFragment = CameraFragment.createInstance(this);
+        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, cameraFragment).commit();
     }
 
     public void InitCatalog() {

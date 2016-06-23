@@ -2,6 +2,7 @@ package hcmus.vuphan.moneykeeper.scences;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -28,12 +29,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import hcmus.vuphan.moneykeeper.R;
+import hcmus.vuphan.moneykeeper.dialogs.CUChiTieuThang;
 
 /**
  * Created by monster on 15/06/2016.
  */
 public class CameraFragment extends Fragment implements View.OnClickListener {
     private static final int SELECT_FILE_ACTIVITY_REQUEST_CODE = 101;
+    static FragmentManager fragmentManager;
     Context context;
 
     private Uri fileUri;
@@ -67,7 +70,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener {
         tvURL = (TextView) view.findViewById(R.id.tvURL);
         btnCamera.setOnClickListener(this);
         btnGallery.setOnClickListener(this);
-
+        fragmentManager = getFragmentManager();
         return view;
     }
 
@@ -75,7 +78,9 @@ public class CameraFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnCamera:
-                OnCameraButtonClick();
+                //OnCameraButtonClick();
+                CUChiTieuThang cuChiTieuThang = CUChiTieuThang.concreateInstance(null, context);
+                cuChiTieuThang.show(fragmentManager, "dialog");
                 break;
             case R.id.btnGallery:
                 OnGalleryButtonClick();

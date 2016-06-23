@@ -112,6 +112,10 @@
         "source": "/home/monster/Downloads/MoneyKeeper/app/src/main/res/layout/catalog_layout.xml"
     },
     {
+        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/layout/cu_chi_tieu_thang.xml",
+        "source": "/home/monster/Downloads/MoneyKeeper/app/src/main/res/layout/cu_chi_tieu_thang.xml"
+    },
+    {
         "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_lines.xml"
     },
