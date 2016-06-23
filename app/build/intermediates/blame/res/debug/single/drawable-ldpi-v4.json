@@ -1,22 +1,42 @@
 [
     {
-        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_verified_user_24dp.png",
-        "source": "/home/monster/Downloads/MoneyKeeper/app/build/generated/res/pngs/debug/drawable-ldpi/ic_verified_user_24dp.png"
+        "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_cancel_24dp.png",
+        "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_cancel_24dp.png"
     },
     {
-        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_warning_24dp.png",
-        "source": "/home/monster/Downloads/MoneyKeeper/app/build/generated/res/pngs/debug/drawable-ldpi/ic_warning_24dp.png"
+        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_add_circle_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_add_circle_24dp.png"
     },
     {
-        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_cancel_24dp.png",
-        "source": "/home/monster/Downloads/MoneyKeeper/app/build/generated/res/pngs/debug/drawable-ldpi/ic_cancel_24dp.png"
+        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_done_all_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_done_all_24dp.png"
     },
     {
-        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_done_all_24dp.png",
-        "source": "/home/monster/Downloads/MoneyKeeper/app/build/generated/res/pngs/debug/drawable-ldpi/ic_done_all_24dp.png"
+        "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_verified_user_24dp.png",
+        "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_verified_user_24dp.png"
     },
     {
-        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_add_circle_24dp.png",
-        "source": "/home/monster/Downloads/MoneyKeeper/app/build/generated/res/pngs/debug/drawable-ldpi/ic_add_circle_24dp.png"
+        "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_warning_24dp.png",
+        "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_warning_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_cancel_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_cancel_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_verified_user_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_verified_user_24dp.png"
+    },
+    {
+        "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_add_circle_24dp.png",
+        "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_add_circle_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_warning_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_warning_24dp.png"
+    },
+    {
+        "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_done_all_24dp.png",
+        "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_done_all_24dp.png"
     }
 ]
