@@ -3,6 +3,7 @@ package hcmus.vuphan.moneykeeper.dialogs;
 import android.app.DatePickerDialog;
 import android.app.DialogFragment;
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -34,7 +35,7 @@ public class CUChiTieuThang extends DialogFragment
 {
     private static final String CHI_TIEU_THANG_AGRS = "chi_tieu_thang";
     Button btnOK, btnCancel;
-    EditText edtChiTieuToiDa, edtThang;
+    EditText edtChiTieuToiDa;
     DatePicker dpThang;
     public Context context;
 
@@ -50,25 +51,6 @@ public class CUChiTieuThang extends DialogFragment
         return cuChiTieuThang;
     }
 
-    Calendar myCalendar = Calendar.getInstance();
-
-    DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
-
-        @Override
-        public void onDateSet(DatePicker view, int year, int monthOfYear,
-                              int dayOfMonth) {
-            // TODO Auto-generated method stub
-            myCalendar.set(Calendar.YEAR, year);
-            myCalendar.set(Calendar.MONTH, monthOfYear);
-            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-            updateLabel();
-        }
-
-    };
-
-    private void updateLabel() {
-        edtThang.setText(global.df.format(myCalendar.getTime()));
-    }
 
     @Nullable
     @Override
@@ -76,37 +58,21 @@ public class CUChiTieuThang extends DialogFragment
         View view = inflater.inflate(R.layout.cu_chi_tieu_thang, container, false);
         btnOK = (Button) view.findViewById(R.id.btnOK);
         btnCancel = (Button) view.findViewById(R.id.btnCancel);
-        edtThang = (EditText) view.findViewById(R.id.edtThang);
         edtChiTieuToiDa = (EditText) view.findViewById(R.id.edtChiTieuToiDa);
         dpThang = (DatePicker) view.findViewById(R.id.dpThang);
+        dpThang.findViewById(Resources.getSystem().getIdentifier("day", "id", "android")).setVisibility(View.GONE);
+        dpThang.setCalendarViewShown(false);
+        dpThang.setSpinnersShown(true);
 
-        try {
-            java.lang.reflect.Field[] datePickerDialogFields = dpThang.getClass().getDeclaredFields();
-            for (java.lang.reflect.Field datePickerDialogField : datePickerDialogFields) {
-                if (datePickerDialogField.getName().equals("mDatePicker")) {
-                    datePickerDialogField.setAccessible(true);
-                    DatePicker datePicker = (DatePicker) datePickerDialogField.get(dpThang);
-                    java.lang.reflect.Field[] datePickerFields = datePickerDialogField.getType().getDeclaredFields();
-                    for (java.lang.reflect.Field datePickerField : datePickerFields) {
-                        Log.i("test", datePickerField.getName());
-                        if ("mDaySpinner".equals(datePickerField.getName())) {
-                            datePickerField.setAccessible(true);
-                            Object dayPicker = datePickerField.get(datePicker);
-                            ((View) dayPicker).setVisibility(View.GONE);
-                        }
-                    }
-                }
-            }
-        }
-        catch (Exception ex) {
-        }
 
         final Bundle bundle = getArguments();
         if (bundle != null) {
             ChiTieuThang chiTieuThang = (ChiTieuThang) bundle.getSerializable(CHI_TIEU_THANG_AGRS);
-            edtThang.setText(chiTieuThang.getThoiGian().toString());
+            dpThang.updateDate(chiTieuThang.getThoiGian().getYear(), chiTieuThang.getThoiGian().getMonth(), chiTieuThang.getThoiGian().getDay());
             edtChiTieuToiDa.setText(chiTieuThang.getSoTienToiDa());
-
+            getDialog().setTitle("Chỉnh sửa chi tiêu tháng");
+        } else {
+            getDialog().setTitle("Tạo mới chi tiêu tháng");
         }
 
 
@@ -121,11 +87,8 @@ public class CUChiTieuThang extends DialogFragment
                 }
 
                 chiTieuThang.setSoTienToiDa(Integer.valueOf(edtChiTieuToiDa.getText().toString()));
-                try {
-                    chiTieuThang.setThoiGian(global.df.parse(edtThang.getText().toString()));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
+                chiTieuThang.setThoiGian(new Date(dpThang.getYear(), dpThang.getMonth(), 1));
+
                 chiTieuThang.save();
                 dismiss();
             }

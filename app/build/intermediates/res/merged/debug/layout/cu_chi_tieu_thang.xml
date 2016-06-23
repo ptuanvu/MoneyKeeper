@@ -25,21 +25,11 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Thang"
-                android:inputType="date"
-                android:id="@+id/edtThang"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/dpThang"/>
-
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="So Tien Toi Da"
                 android:inputType="number"
                 android:id="@+id/edtChiTieuToiDa"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/edtThang"/>
+                android:layout_below="@+id/dpThang"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
