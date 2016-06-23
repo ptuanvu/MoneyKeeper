@@ -4,10 +4,17 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.orm.SugarContext;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import hcmus.vuphan.moneykeeper.dialogs.CUChiTieuThang;
 import hcmus.vuphan.moneykeeper.model.Catalog;
+import hcmus.vuphan.moneykeeper.model.ChiTieuThang;
 import hcmus.vuphan.moneykeeper.model.Wallet;
 import hcmus.vuphan.moneykeeper.scences.AddGdFragment;
 import hcmus.vuphan.moneykeeper.scences.CameraFragment;
@@ -49,6 +56,24 @@ public class MainActivity extends AppCompatActivity {
         // Khoi tao ham su kien
         CreateListenerEvent();
 
+        Calendar calendar = Calendar.getInstance();
+        Date curDate = calendar.getTime();
+        int curMonth = curDate.getMonth();
+
+        List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
+        Boolean haveChiTieuThang = false;
+        for (ChiTieuThang chiTieuThang :
+                chiTieuThangs) {
+            if (chiTieuThang.getThoiGian().getMonth() == curMonth) {
+                haveChiTieuThang = true;
+            }
+        }
+
+        if (!haveChiTieuThang) {
+            CUChiTieuThang cuChiTieuThang = CUChiTieuThang.concreateInstance(null, this);
+            cuChiTieuThang.show(getFragmentManager(), "dialog");
+            Toast.makeText(MainActivity.this, "Vui lòng tạo kế hoạch chi tiêu cho tháng này!", Toast.LENGTH_SHORT).show();
+        }
 
         //create database here
         SharedPreferences initialPref = getSharedPreferences("INITIAL", 0);
