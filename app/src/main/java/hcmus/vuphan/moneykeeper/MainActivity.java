@@ -1,16 +1,22 @@
 package hcmus.vuphan.moneykeeper;
 
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import com.orm.SugarContext;
 
 import hcmus.vuphan.moneykeeper.model.Catalog;
+import hcmus.vuphan.moneykeeper.scences.AddGdFragment;
 import hcmus.vuphan.moneykeeper.scences.CameraFragment;
+import hcmus.vuphan.moneykeeper.scences.CapnhatgdFragment;
 import hcmus.vuphan.moneykeeper.scences.CatalogFragment;
+import hcmus.vuphan.moneykeeper.scences.ListwalletFragment;
+import hcmus.vuphan.moneykeeper.scences.LoginFragment;
+import hcmus.vuphan.moneykeeper.scences.ShowListGdFragment;
+import hcmus.vuphan.moneykeeper.scences.ShowwalletFragment;
+import hcmus.vuphan.moneykeeper.scences.SignupFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
     FrameLayout contentFrameLayout;
     CameraFragment cameraFragment;
     CatalogFragment catalogFragment;
+    LoginFragment loginFragment;
+    SignupFragment signupFragment;
+    ListwalletFragment listwalletFragment;
+    ShowwalletFragment showwalletFragment;
+    ShowListGdFragment showListGdFragment;
+    AddGdFragment addGdFragment;
+    CapnhatgdFragment capnhatgdFragment;
 
     public final static String KEY = "camera_instance_restore";
 
@@ -33,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         // Khoi tao ham su kien
         CreateListenerEvent();
 
+
+        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, showListGdFragment).commit();
+
         //create database here
         SharedPreferences initialPref = getSharedPreferences("INITIAL", 0);
         boolean firsttimer = initialPref.getBoolean("INITIAL", false);
@@ -46,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
         cameraFragment = CameraFragment.createInstance(this);
         getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, cameraFragment).commit();
+
     }
 
     public void InitCatalog() {
@@ -150,7 +166,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void InitID() {
         contentFrameLayout = (FrameLayout) findViewById(R.id.contentFrameLayout);
-
+        catalogFragment = CatalogFragment.createFragment(this);
+        loginFragment = LoginFragment.createFragment(this);
+        signupFragment = SignupFragment.createFragment(this);
+        listwalletFragment = ListwalletFragment.createFragment(this);
+        showwalletFragment = ShowwalletFragment.createFragment(this);
+        showListGdFragment = ShowListGdFragment.createInstance(this);
+        addGdFragment = AddGdFragment.createInstance(this);
+        capnhatgdFragment = CapnhatgdFragment.createInstance(this);
     }
 
 

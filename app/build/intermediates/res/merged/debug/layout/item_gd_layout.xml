@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view" >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Tên GD"
+                android:id="@+id/txtTen" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Catalog"
+                android:paddingTop="10dp"
+                android:id="@+id/txtcatalog" />
+
+            <ImageButton
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imbDel"
+                android:src="@drawable/ic_cancel_24dp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:text="Up"
+                android:id="@+id/btup" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>
