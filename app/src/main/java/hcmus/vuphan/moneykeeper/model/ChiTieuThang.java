@@ -3,13 +3,14 @@ package hcmus.vuphan.moneykeeper.model;
 import com.orm.SugarRecord;
 import com.orm.dsl.Table;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by monster on 23/06/2016.
  */
 @Table
-public class ChiTieuThang extends SugarRecord {
+public class ChiTieuThang extends SugarRecord implements Serializable{
     int soTienToiDa;
     Date thoiGian;
 
