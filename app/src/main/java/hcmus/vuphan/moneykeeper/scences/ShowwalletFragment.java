@@ -17,7 +17,7 @@ import com.orm.SugarContext;
 import java.util.List;
 
 import hcmus.vuphan.moneykeeper.R;
-import hcmus.vuphan.moneykeeper.model.wallet;
+import hcmus.vuphan.moneykeeper.model.Wallet;
 
 /**
  * Created by Join on 23/06/2016.
@@ -30,7 +30,7 @@ public class ShowwalletFragment extends Fragment implements View.OnClickListener
      EditText tietkiem;
      Button upd;
      Button back;
-    List<wallet> temp;
+    List<Wallet> temp;
 
     public void setContext(FragmentActivity context) {
         this.context = context;
@@ -54,7 +54,7 @@ public class ShowwalletFragment extends Fragment implements View.OnClickListener
          back = (Button)view.findViewById(R.id.btbacklistwallet);
         Bundle b = getArguments();
         String name = b.getString("name");
-        temp = wallet.find(wallet.class,"name = ? ",name);
+        temp = Wallet.find(Wallet.class,"name = ? ",name);
         if (temp.size()!=0)
         {
             tenvi.setText(temp.get(0).getName());
@@ -74,7 +74,7 @@ public class ShowwalletFragment extends Fragment implements View.OnClickListener
             String uphientai = hientai.getText().toString();
             String updutru = dutru.getText().toString();
             String uptietkiem = tietkiem.getText().toString();
-            List<wallet> tempup = wallet.find(wallet.class, "name = ? ", upname);
+            List<Wallet> tempup = Wallet.find(Wallet.class, "name = ? ", upname);
             if (tempup.size() == 0 || temp.get(0).getId().equals(tempup.get(0).getId())) {
                 if (!tryParseInt(uphientai)||!tryParseInt(updutru)||!tryParseInt(uptietkiem))
                 {

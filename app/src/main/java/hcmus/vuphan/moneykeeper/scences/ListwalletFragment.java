@@ -19,7 +19,7 @@ import java.util.List;
 
 import hcmus.vuphan.moneykeeper.R;
 import hcmus.vuphan.moneykeeper.adapters.WalletAdapter;
-import hcmus.vuphan.moneykeeper.model.wallet;
+import hcmus.vuphan.moneykeeper.model.Wallet;
 
 /**
  * Created by Join on 23/06/2016.
@@ -57,7 +57,8 @@ public class ListwalletFragment extends Fragment implements View.OnClickListener
     }
     public void InitList()
     {
-        List<wallet> initwallet = wallet.listAll(wallet.class);
+        List<Wallet> initwallet = Wallet.listAll(Wallet.class);
+
         for (int i = 0 ; i < initwallet.size(); i ++)
         {
             mylistwallet.add(initwallet.get(i).getName());
@@ -76,7 +77,7 @@ public class ListwalletFragment extends Fragment implements View.OnClickListener
                     return;
                 }
             }
-            wallet newwallet = new wallet(name.getText().toString(), "", "", "");
+            Wallet newwallet = new Wallet(name.getText().toString(), "", "", "");
             newwallet.save();
             mylistwallet.add(name.getText().toString());
             mydapter.notifyDataSetChanged();

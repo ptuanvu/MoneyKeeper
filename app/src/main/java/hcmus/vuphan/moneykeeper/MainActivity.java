@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import com.orm.SugarContext;
 
 import hcmus.vuphan.moneykeeper.model.Catalog;
+import hcmus.vuphan.moneykeeper.model.Wallet;
 import hcmus.vuphan.moneykeeper.scences.AddGdFragment;
 import hcmus.vuphan.moneykeeper.scences.CameraFragment;
 import hcmus.vuphan.moneykeeper.scences.CapnhatgdFragment;
@@ -17,6 +18,7 @@ import hcmus.vuphan.moneykeeper.scences.LoginFragment;
 import hcmus.vuphan.moneykeeper.scences.ShowListGdFragment;
 import hcmus.vuphan.moneykeeper.scences.ShowwalletFragment;
 import hcmus.vuphan.moneykeeper.scences.SignupFragment;
+import hcmus.vuphan.moneykeeper.scences.TinhTrangHienTai;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ShowListGdFragment showListGdFragment;
     AddGdFragment addGdFragment;
     CapnhatgdFragment capnhatgdFragment;
+    TinhTrangHienTai tinhTrangHienTai;
 
     public final static String KEY = "camera_instance_restore";
 
@@ -47,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
         CreateListenerEvent();
 
 
-        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, showListGdFragment).commit();
-
         //create database here
         SharedPreferences initialPref = getSharedPreferences("INITIAL", 0);
         boolean firsttimer = initialPref.getBoolean("INITIAL", false);
@@ -61,13 +62,17 @@ public class MainActivity extends AppCompatActivity {
             editorPref.commit();
         }
 
-
+        tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
         cameraFragment = CameraFragment.createInstance(this);
-        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, cameraFragment).commit();
+        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
 
     }
 
     public void InitCatalog() {
+
+        Wallet newWallet = new Wallet("Ví tiền của tôi", "2000000", "500000", "0");
+        newWallet.save();
+
         Catalog c1 = new Catalog("Ăn uống", "Nhu cầu ăn uống hằng ngày.", -1L);
         Long id = c1.save();
         Catalog b11 = new Catalog("Nhà hàng", "", id);

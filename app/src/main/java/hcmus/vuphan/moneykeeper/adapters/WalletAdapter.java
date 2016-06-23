@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import hcmus.vuphan.moneykeeper.R;
-import hcmus.vuphan.moneykeeper.model.wallet;
+import hcmus.vuphan.moneykeeper.model.Wallet;
 import hcmus.vuphan.moneykeeper.scences.ShowwalletFragment;
 
 /**
@@ -73,7 +73,7 @@ public class WalletAdapter extends BaseAdapter implements ListAdapter {
                         .setIcon(R.drawable.ic_warning_24dp)
                         .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                List<wallet> temp = wallet.find(wallet.class, "name = ?", list.get(position));
+                                List<Wallet> temp = Wallet.find(Wallet.class, "name = ?", list.get(position));
                                 temp.get(0).delete();
                                 list.remove(position); //or some other task
                                 notifyDataSetChanged();
