@@ -24,7 +24,7 @@ import hcmus.vuphan.moneykeeper.model.Wallet;
  */
 public class TinhTrangHienTai extends Fragment {
     Context context;
-    TextView tvName, tvCurMoney, tvSaveMoney, tvBankMoney;
+    TextView tvName, tvCurMoney, tvSaveMoney, tvBankMoney, tvStatus;
     Wallet curWallet;
 
     public void setContext(Context context) {
@@ -45,6 +45,7 @@ public class TinhTrangHienTai extends Fragment {
         tvCurMoney = (TextView) view.findViewById(R.id.tvCurMoney);
         tvSaveMoney = (TextView) view.findViewById(R.id.tvSaveMoney);
         tvBankMoney = (TextView) view.findViewById(R.id.tvBankMoney);
+        tvStatus = (TextView) view.findViewById(R.id.tvStatus);
 
         curWallet = MoneyHelper.GetCurWallet();
         tvCurMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTienhientai())));
@@ -54,16 +55,37 @@ public class TinhTrangHienTai extends Fragment {
         Calendar calendar = Calendar.getInstance();
 
         String currentStatus = GetCurrentStatus(calendar.getTime());
+        tvStatus.setText(currentStatus);
 
         return view;
     }
 
     private String GetCurrentStatus(Date time) {
         int month = time.getMonth();
-        List<ChiTieuThang> chiTieuThangs = ChiTieuThang.find(ChiTieuThang.class, );
+        //List<ChiTieuThang> chiTieuThangs = ChiTieuThang.find(ChiTieuThang.class, "strftime(%m, thoi_gian) = ?", String.valueOf(month) );
+        List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
 
+        ChiTieuThang curCTT = null;
+        for (ChiTieuThang chiTieuThang :
+                chiTieuThangs) {
+            if (chiTieuThang.getThoiGian().getMonth() == month)
+            {
+                curCTT = chiTieuThang;
+                break;
+            }
+        }
 
-        return null;
+        List<Giaodich> giaodiches = Giaodich.find(Giaodich.class, "idthang = ?", String.valueOf(curCTT.getId()));
+        int soTienDaGiaoDich = 0;
+        for (Giaodich giaodich :
+                giaodiches) {
+            soTienDaGiaoDich += 20000;
+        }
+        int soTienHienTai = curCTT.getSoTienToiDa() - soTienDaGiaoDich;
+
+        String gioiHan = MoneyHelper.MoneyParserWithoutVND(curCTT.getSoTienToiDa());
+        String hienTai = MoneyHelper.MoneyParserWithoutVND(soTienHienTai);
+        return hienTai + "/" + gioiHan;
     }
 
 

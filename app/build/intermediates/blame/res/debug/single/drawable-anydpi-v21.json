@@ -12,11 +12,11 @@
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_warning_24dp.xml"
     },
     {
-        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_add_circle_24dp.xml",
-        "source": "/home/monster/Downloads/MoneyKeeper/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_add_circle_24dp.xml"
-    },
-    {
         "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_verified_user_24dp.xml",
         "source": "/home/monster/Downloads/MoneyKeeper/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_verified_user_24dp.xml"
+    },
+    {
+        "merged": "/home/monster/Downloads/MoneyKeeper/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_add_circle_24dp.xml",
+        "source": "/home/monster/Downloads/MoneyKeeper/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_add_circle_24dp.xml"
     }
 ]

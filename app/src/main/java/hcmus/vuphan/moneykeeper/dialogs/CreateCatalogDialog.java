@@ -17,6 +17,7 @@ import java.util.List;
 
 import hcmus.vuphan.moneykeeper.R;
 import hcmus.vuphan.moneykeeper.model.Catalog;
+import hcmus.vuphan.moneykeeper.model.ChiTieuThang;
 import hcmus.vuphan.moneykeeper.scences.CatalogFragment;
 
 /**
@@ -61,8 +62,11 @@ public class CreateCatalogDialog extends DialogFragment implements View.OnClickL
              ) {
             list.add(c.getTitle());
         }
+
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, list);
         spnParrent.setAdapter(dataAdapter);
+
+
         Bundle bundle = getArguments();
         if (bundle != null) {
             Catalog c = (Catalog) bundle.getSerializable(INPUT_CATALOG);

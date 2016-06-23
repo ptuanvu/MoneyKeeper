@@ -2605,9 +2605,12 @@ containing a value of this type.
         public static final int top=0x7f0c0026;
         public static final int topPanel=0x7f0c0047;
         public static final int touch_outside=0x7f0c0089;
+        public static final int tvBankMoney=0x7f0c00c9;
         public static final int tvCurMoney=0x7f0c00c6;
         public static final int tvDescription=0x7f0c007e;
         public static final int tvName=0x7f0c00c5;
+        public static final int tvSaveMoney=0x7f0c00c8;
+        public static final int tvStatus=0x7f0c00c7;
         public static final int tvTitle=0x7f0c007d;
         public static final int tvURL=0x7f0c006c;
         public static final int txtDiaDiemGiaoDich=0x7f0c00be;

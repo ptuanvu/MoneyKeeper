@@ -51,6 +51,9 @@ public class CUChiTieuThang extends DialogFragment
         return cuChiTieuThang;
     }
 
+    public interface ChiTieuThangDiaglogListener {
+        void OnChiTieuThangDialogFinish();
+    }
 
     @Nullable
     @Override
@@ -90,6 +93,7 @@ public class CUChiTieuThang extends DialogFragment
                 chiTieuThang.setThoiGian(new Date(dpThang.getYear(), dpThang.getMonth(), 1));
 
                 chiTieuThang.save();
+                ((ChiTieuThangDiaglogListener)getActivity()).OnChiTieuThangDialogFinish();
                 dismiss();
             }
         });

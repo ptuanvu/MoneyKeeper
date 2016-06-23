@@ -27,7 +27,7 @@ import hcmus.vuphan.moneykeeper.scences.ShowwalletFragment;
 import hcmus.vuphan.moneykeeper.scences.SignupFragment;
 import hcmus.vuphan.moneykeeper.scences.TinhTrangHienTai;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CUChiTieuThang.ChiTieuThangDiaglogListener {
 
 
     FrameLayout contentFrameLayout;
@@ -50,6 +50,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         SugarContext.init(this);
 
+        //create database here
+        SharedPreferences initialPref = getSharedPreferences("INITIAL", 0);
+        boolean firsttimer = initialPref.getBoolean("INITIAL", false);
+        if (!firsttimer) {
+            InitCatalog();
+
+            //get boolean preference to true
+            SharedPreferences.Editor editorPref = initialPref.edit();
+            editorPref.putBoolean("INITIAL", true);
+            editorPref.commit();
+        }
+
         // Khoi tao ID cho cac thanh phan
         InitID();
 
@@ -59,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         Date curDate = calendar.getTime();
         int curMonth = curDate.getMonth();
+
+
 
         List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
         Boolean haveChiTieuThang = false;
@@ -73,23 +87,10 @@ public class MainActivity extends AppCompatActivity {
             CUChiTieuThang cuChiTieuThang = CUChiTieuThang.concreateInstance(null, this);
             cuChiTieuThang.show(getFragmentManager(), "dialog");
             Toast.makeText(MainActivity.this, "Vui lòng tạo kế hoạch chi tiêu cho tháng này!", Toast.LENGTH_SHORT).show();
+        } else {
+            tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
+            getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
         }
-
-        //create database here
-        SharedPreferences initialPref = getSharedPreferences("INITIAL", 0);
-        boolean firsttimer = initialPref.getBoolean("INITIAL", false);
-        if (!firsttimer) {
-            InitCatalog();
-
-            //get boolean preference to true
-            SharedPreferences.Editor editorPref = initialPref.edit();
-            editorPref.putBoolean("INITIAL", true);
-            editorPref.commit();
-        }
-
-        tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
-        cameraFragment = CameraFragment.createInstance(this);
-        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
 
     }
 
@@ -188,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
 
         Catalog c15 = new Catalog("", "", -1L);
         Catalog c16 = new Catalog("", "", -1L);
+
     }
 
     private void CreateListenerEvent() {
@@ -207,4 +209,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void OnChiTieuThangDialogFinish() {
+        tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
+        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
+    }
 }

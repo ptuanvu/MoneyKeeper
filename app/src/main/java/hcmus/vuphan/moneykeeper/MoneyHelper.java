@@ -21,7 +21,10 @@ public class MoneyHelper {
         int rank = sMoney.length() / 3;
 
         if (rank > 1) {
-            for (int i = rank - 1; i >= 1; i--) {
+            if (rank % 2 == 0) {
+                rank--;
+            }
+            for (int i = rank ; i >= 1; i--) {
                 int spos = rank == i ? 0 : sMoney.length() - 3*(i + 1);
                 int epos = sMoney.length() - 3*i;
                 result += sMoney.substring(spos, epos) + ".";
@@ -30,6 +33,8 @@ public class MoneyHelper {
             int spos = sMoney.length() - 3;
             int epos = sMoney.length();
             result += sMoney.substring(spos, epos);
+        } else {
+            result = sMoney;
         }
         return result;
     }
@@ -40,7 +45,10 @@ public class MoneyHelper {
         int rank = sMoney.length() / 3;
 
         if (rank > 1) {
-            for (int i = rank - 1; i >= 1; i--) {
+            if (rank % 2 == 0) {
+                rank--;
+            }
+            for (int i = rank ; i >= 1; i--) {
                 int spos = rank == i ? 0 : sMoney.length() - 3*(i + 1);
                 int epos = sMoney.length() - 3*i;
                 result += sMoney.substring(spos, epos) + ".";
@@ -49,6 +57,8 @@ public class MoneyHelper {
             int spos = sMoney.length() - 3;
             int epos = sMoney.length();
             result += sMoney.substring(spos, epos);
+        } else {
+            result = sMoney;
         }
         result += " VND";
         return result;

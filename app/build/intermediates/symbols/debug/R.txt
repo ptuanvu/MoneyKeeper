@@ -783,9 +783,12 @@ int id title_template 0x7f0c0048
 int id top 0x7f0c0026
 int id topPanel 0x7f0c0047
 int id touch_outside 0x7f0c0089
+int id tvBankMoney 0x7f0c00c9
 int id tvCurMoney 0x7f0c00c6
 int id tvDescription 0x7f0c007e
 int id tvName 0x7f0c00c5
+int id tvSaveMoney 0x7f0c00c8
+int id tvStatus 0x7f0c00c7
 int id tvTitle 0x7f0c007d
 int id tvURL 0x7f0c006c
 int id txtDiaDiemGiaoDich 0x7f0c00be
