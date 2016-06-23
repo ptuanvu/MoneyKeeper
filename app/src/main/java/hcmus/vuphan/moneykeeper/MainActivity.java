@@ -1,20 +1,37 @@
 package hcmus.vuphan.moneykeeper;
 
+import android.Manifest;
+import android.app.FragmentTransaction;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.view.GravityCompat;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import com.orm.SugarContext;
 
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import hcmus.vuphan.moneykeeper.dialogs.CUChiTieuThang;
+import hcmus.vuphan.moneykeeper.dialogs.CUGiaoDich;
 import hcmus.vuphan.moneykeeper.model.Catalog;
 import hcmus.vuphan.moneykeeper.model.ChiTieuThang;
+import hcmus.vuphan.moneykeeper.model.Giaodich;
 import hcmus.vuphan.moneykeeper.model.Wallet;
 import hcmus.vuphan.moneykeeper.scences.AddGdFragment;
 import hcmus.vuphan.moneykeeper.scences.CameraFragment;
@@ -27,7 +44,7 @@ import hcmus.vuphan.moneykeeper.scences.ShowwalletFragment;
 import hcmus.vuphan.moneykeeper.scences.SignupFragment;
 import hcmus.vuphan.moneykeeper.scences.TinhTrangHienTai;
 
-public class MainActivity extends AppCompatActivity implements CUChiTieuThang.ChiTieuThangDiaglogListener {
+public class MainActivity extends AppCompatActivity implements CUChiTieuThang.ChiTieuThangDiaglogListener, NavigationView.OnNavigationItemSelectedListener , CUGiaoDich.CUGiaoDichListener{
 
 
     FrameLayout contentFrameLayout;
@@ -41,6 +58,12 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     AddGdFragment addGdFragment;
     CapnhatgdFragment capnhatgdFragment;
     TinhTrangHienTai tinhTrangHienTai;
+
+    //Cac thanh phan giao dien chinh
+    Toolbar toolbar = null;
+    DrawerLayout drawer;
+    ActionBarDrawerToggle toggle;
+    NavigationView nvLeftMenu;
 
     public final static String KEY = "camera_instance_restore";
 
@@ -68,10 +91,14 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         // Khoi tao ham su kien
         CreateListenerEvent();
 
+        // Cai dat cac thanh phan giao dien
+        SettingUpUI();
+
+
+
         Calendar calendar = Calendar.getInstance();
         Date curDate = calendar.getTime();
         int curMonth = curDate.getMonth();
-
 
 
         List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
@@ -90,7 +117,47 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         } else {
             tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
             getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
+
         }
+
+    }
+
+    private void SettingUpUI() {
+
+        setSupportActionBar(toolbar);
+        toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+        nvLeftMenu.setItemIconTintList(null);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    public void InitGiaoDich() {
+        ChiTieuThang curCTT = MoneyHelper.GetChiTieuThangByMonth(MoneyHelper.GetCurrentMonth());
+
+        Giaodich gd1 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
+        Giaodich gd2 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
+        Giaodich gd3 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
+        Giaodich gd4 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
+        Giaodich gd5 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
+        Giaodich gd6 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
+
+        gd1.save();
+        gd2.save();
+        gd3.save();
+        gd4.save();
+        gd5.save();
+        gd6.save();
 
     }
 
@@ -121,7 +188,7 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         id = c3.save();
         Catalog b31 = new Catalog("Điện thoại di động", "", id);
 
-       // Catalog c4 = new Catalog("Liên lạc", "Các nhu cầu liên lạc", -1L);
+        // Catalog c4 = new Catalog("Liên lạc", "Các nhu cầu liên lạc", -1L);
 
         Catalog c5 = new Catalog("Giao thông", "Các nhu cầu về đi lại.", -1L);
         id = c5.save();
@@ -193,11 +260,14 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     }
 
     private void CreateListenerEvent() {
-
+        nvLeftMenu.setNavigationItemSelectedListener(this);
     }
 
     private void InitID() {
         contentFrameLayout = (FrameLayout) findViewById(R.id.contentFrameLayout);
+        nvLeftMenu = (NavigationView) findViewById(R.id.nvLeftMenu);
+        drawer = (DrawerLayout) findViewById(R.id.drawer);
+        toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         catalogFragment = CatalogFragment.createFragment(this);
         loginFragment = LoginFragment.createFragment(this);
         signupFragment = SignupFragment.createFragment(this);
@@ -206,6 +276,7 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         showListGdFragment = ShowListGdFragment.createInstance(this);
         addGdFragment = AddGdFragment.createInstance(this);
         capnhatgdFragment = CapnhatgdFragment.createInstance(this);
+
     }
 
 
@@ -213,5 +284,24 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     public void OnChiTieuThangDialogFinish() {
         tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
         getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
+        InitGiaoDich();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        switch (item.getItemId()) {
+            case R.id.mnThemGiaoDich:
+                CUGiaoDich cuGiaoDich = CUGiaoDich.concreateInstance(null, this);
+                cuGiaoDich.show(getFragmentManager(), "dialog");
+                break;
+        }
+        return false;
+    }
+
+
+    @Override
+    public void OnCUGiaoDichFinish() {
+        tinhTrangHienTai.Refresh();
     }
 }

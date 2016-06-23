@@ -75,12 +75,10 @@
 
     </TableLayout>
 
-    <com.jjoe64.graphview.helper.GraphViewXML
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/gvGraph"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:seriesData="0=5;2=5;3=0;4=2;5=100;6=200"
-        app:seriesType="line"
-        app:seriesColor="#ee0000" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

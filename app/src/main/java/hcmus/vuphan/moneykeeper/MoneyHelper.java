@@ -3,6 +3,9 @@ package hcmus.vuphan.moneykeeper;
 import java.util.Calendar;
 import java.util.List;
 
+import hcmus.vuphan.moneykeeper.model.Catalog;
+import hcmus.vuphan.moneykeeper.model.ChiTieuThang;
+import hcmus.vuphan.moneykeeper.model.Giaodich;
 import hcmus.vuphan.moneykeeper.model.Wallet;
 
 /**
@@ -21,7 +24,7 @@ public class MoneyHelper {
         int rank = sMoney.length() / 3;
 
         if (rank > 1) {
-            if (rank % 2 == 0) {
+            if (sMoney.length() % 2 == 0) {
                 rank--;
             }
             for (int i = rank ; i >= 1; i--) {
@@ -39,13 +42,42 @@ public class MoneyHelper {
         return result;
     }
 
+    public static ChiTieuThang GetChiTieuThangByMonth(int month) {
+        List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
+        ChiTieuThang curCTT = null;
+        for (ChiTieuThang chiTieuThang :
+                chiTieuThangs) {
+            if (chiTieuThang.getThoiGian().getMonth() == month)
+            {
+                curCTT = chiTieuThang;
+                break;
+            }
+        }
+
+        return curCTT;
+    }
+
+    public static List<Giaodich> GetGiaoDichByChiTieuThang(Long id) {
+        List<Giaodich> result = Giaodich.find(Giaodich.class, "idthang = ?", String.valueOf(id));
+        return result;
+    }
+
+    public static int FindOnList(List<Catalog> catalogs, String ID) {
+        for (int i = 0 ; i < catalogs.size(); i ++) {
+            if (catalogs.get(i).getId() == Long.valueOf(ID))
+                return i;
+        }
+
+        return -1;
+    }
+
     public static String MoneyParser(int money) {
         String sMoney = String.valueOf(money);
         String result = "";
         int rank = sMoney.length() / 3;
 
         if (rank > 1) {
-            if (rank % 2 == 0) {
+            if (sMoney.length() % 2 == 0) {
                 rank--;
             }
             for (int i = rank ; i >= 1; i--) {

@@ -2,12 +2,13 @@ package hcmus.vuphan.moneykeeper.model;
 
 import com.orm.SugarRecord;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Join on 23/06/2016.
  */
-public class Giaodich extends SugarRecord {
+public class Giaodich extends SugarRecord implements Serializable{
     private  Long ID;
     String ID_HinhAnh;
     String ID_Thang;

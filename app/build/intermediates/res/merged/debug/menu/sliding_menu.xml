@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/mnThemGiaoDich" android:title="Thêm Giao Dịch" />
+    <item android:id="@+id/mnViTien" android:title="Ví tiền" />
+    <item android:id="@+id/mnLichSuGiaoDich" android:title="Lịch sử giao dịch" />
+    <item android:id="@+id/mnChiTieuThang" android:title="Kế hoạch chi tiêu" />
+    <item android:id="@+id/mnThongKe" android:title="Thống kê" />
+    <item android:title="Catalogs" android:id="@+id/mnCatalog"/>
+    <item android:title="Lưu trữ" android:checkableBehavior="single">
+        <menu>
+            <item android:id="@+id/mnImport" android:title="Import" />
+            <item android:id="@+id/mnExport" android:title="Export" />
+        </menu>
+    </item>
+    <item android:title="Others" android:checkableBehavior="single">
+        <menu>
+            <item android:id="@+id/mnShare" android:title="Chia sẽ trạng thái" />
+        </menu>
+    </item>
+
+</menu>

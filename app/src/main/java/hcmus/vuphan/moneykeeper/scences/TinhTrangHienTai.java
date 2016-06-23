@@ -2,12 +2,19 @@ package hcmus.vuphan.moneykeeper.scences;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter;
+import com.jjoe64.graphview.helper.GraphViewXML;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -26,6 +33,7 @@ public class TinhTrangHienTai extends Fragment {
     Context context;
     TextView tvName, tvCurMoney, tvSaveMoney, tvBankMoney, tvStatus;
     Wallet curWallet;
+    GraphView graphViewXML;
 
     public void setContext(Context context) {
         this.context = context;
@@ -46,16 +54,12 @@ public class TinhTrangHienTai extends Fragment {
         tvSaveMoney = (TextView) view.findViewById(R.id.tvSaveMoney);
         tvBankMoney = (TextView) view.findViewById(R.id.tvBankMoney);
         tvStatus = (TextView) view.findViewById(R.id.tvStatus);
+        graphViewXML = (GraphView) view.findViewById(R.id.gvGraph);
 
-        curWallet = MoneyHelper.GetCurWallet();
-        tvCurMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTienhientai())));
-        tvSaveMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTiendutru())));
-        tvBankMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTientietkiem())));
 
-        Calendar calendar = Calendar.getInstance();
+        Refresh();
 
-        String currentStatus = GetCurrentStatus(calendar.getTime());
-        tvStatus.setText(currentStatus);
+        //graphViewXML.getViewport().setXAxisBoundsManual(true);
 
         return view;
     }
@@ -89,4 +93,50 @@ public class TinhTrangHienTai extends Fragment {
     }
 
 
+    public void Refresh() {
+
+        curWallet = MoneyHelper.GetCurWallet();
+        tvCurMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTienhientai())));
+        tvSaveMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTiendutru())));
+        tvBankMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTientietkiem())));
+
+        Calendar calendar = Calendar.getInstance();
+
+        String currentStatus = GetCurrentStatus(calendar.getTime());
+        tvStatus.setText(currentStatus);
+
+
+        ChiTieuThang curCTT = MoneyHelper.GetChiTieuThangByMonth(MoneyHelper.GetCurrentMonth());
+        List<Giaodich> giaodiches = MoneyHelper.GetGiaoDichByChiTieuThang(curCTT.getId());
+
+        int minDay = calendar.getActualMinimum(Calendar.DAY_OF_MONTH);
+        int maxDay = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
+
+        for (int i = minDay; i <= maxDay; i++) {
+            int sum = 0;
+            for (Giaodich gd :
+                    giaodiches) {
+                if (gd.getThoiGian().getDate() == i)
+                    sum++;
+
+            }
+            DataPoint dp = new DataPoint(i, sum);
+            series.appendData(dp, true, maxDay);
+        }
+        series.setColor(Color.GREEN);
+        series.setThickness(8);
+        graphViewXML.addSeries(series);
+        graphViewXML.setTitle("Chi tiêu tháng này");
+// set date label formatter
+        //graphViewXML.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(getActivity()));
+        graphViewXML.getGridLabelRenderer().setNumHorizontalLabels(16); // only 4 because of the space
+        graphViewXML.getGridLabelRenderer().setHorizontalAxisTitle("Ngày");
+        graphViewXML.getGridLabelRenderer().setVerticalAxisTitle("Số lượng giao dịch");
+
+        // set manual x bounds to have nice steps
+        graphViewXML.getViewport().setMinX(minDay);
+        graphViewXML.getViewport().setMaxX(maxDay);
+    }
 }
