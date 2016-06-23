@@ -54,7 +54,7 @@ public class CreateCatalogDialog extends DialogFragment implements View.OnClickL
         edtTitle = (EditText) view.findViewById(R.id.edtTitle);
         spnParrent = (Spinner) view.findViewById(R.id.spnParrent);
 
-        List<Catalog> catalogs = Catalog.listAll(Catalog.class);
+        List<Catalog> catalogs = Catalog.find(Catalog.class, "id_parrent = ?", "-1");
         List<String> list = new ArrayList<>();
         list.add("Thuộc catalog");
         for (Catalog c: catalogs

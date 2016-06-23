@@ -4,12 +4,12 @@
         "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
@@ -24,12 +24,12 @@
         "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\src\\main\\res\\layout\\listgd_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
-    },
-    {
         "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\camera_layout.xml",
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
-    },
-    {
         "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
         "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
@@ -318,6 +318,10 @@
     {
         "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
         "source": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\New folder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cu_chi_tieu_thang.xml",
+        "source": "C:\\Users\\Join\\Desktop\\New folder\\app\\src\\main\\res\\layout\\cu_chi_tieu_thang.xml"
     },
     {
         "merged": "C:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",

@@ -1,3 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Join\Desktop\New folder\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_184bd198553861d75ce3d5f21f13420374e8664a.jar" />
+    </item>
+    <item
+        jar="C:\DevPrograms\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_5a927da0f9cf71828ec9f3016732df044f9ceb92.jar" />
+    </item>
+    <item
+        jar="C:\Users\Join\Desktop\New folder\app\build\intermediates\exploded-aar\com.github.satyan\sugar\1.5\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="19a40a8afe0289f6520b25353096ac233e78f69d">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\com.github.satyan-sugar-1.5_e4943cc9e648d58803cd5c016fb21e3f239e0d13.jar" />
+    </item>
+    <item
+        jar="C:\Users\Join\Desktop\New folder\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="82ce13fd19cdfde0e392f03c27edeba8d4333648">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.3.0_78058ad980980c578c2253188ed98c4234ae095d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Join\Desktop\New folder\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.3.0_7a5f1ba0aac42af9fbf1122a11dedd099f1880d2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Join\Desktop\New folder\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.3.0_61bdf1179c26f2af4a9f51f0344672e54b64fe19.jar" />
+    </item>
+    <item
+        jar="C:\Users\Join\Desktop\New folder\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_9397d948a6ada029ae9b8820f27b6702438b5c8d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Join\Desktop\New folder\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_9571bfcff18d80b1b2da6b8d9cc8b4005786b869.jar" />
+    </item>
+    <item
+        jar="C:\Users\Join\Desktop\New folder\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_8ccf604873c131d4b427fdc4620dabfbedf72dfa.jar" />
+    </item>
+    <item
+        jar="C:\Users\Join\Desktop\New folder\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="C:\Users\Join\Desktop\New folder\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_c4917e9dafa9642a231709cc72bd09303b13f272.jar" />
+    </item>
+
+</items>

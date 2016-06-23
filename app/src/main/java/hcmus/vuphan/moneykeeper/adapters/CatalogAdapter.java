@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import hcmus.vuphan.moneykeeper.MainActivity;
 import hcmus.vuphan.moneykeeper.R;
@@ -71,10 +72,25 @@ public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogV
                 CatalogFragment.ShowCreateDialog(c);
             }
         });
+        if (c.getIdParrent() != -1L) {
+            holder.tvTitle.setTextSize(16);
+        } else {
+            holder.tvTitle.setTextSize(20);
+        }
     }
 
     private void DeleteCatalogItem(Catalog c) {
-        c.delete();
+
+        if (c.getIdParrent() == -1L) {
+            c.delete();
+        } else {
+            List<Catalog> childs = Catalog.find(Catalog.class, "id_parrent = ?", String.valueOf(c.getId()));
+            for (Catalog child: childs
+                 ) {
+                child.delete();
+            }
+            c.delete();
+        }
     }
 
     @Override
