@@ -84,7 +84,7 @@ public class TinhTrangHienTai extends Fragment {
         int soTienDaGiaoDich = 0;
         for (Giaodich giaodich :
                 giaodiches) {
-            soTienDaGiaoDich += 20000;
+            soTienDaGiaoDich -= giaodich.getTongtien();
         }
         int soTienHienTai = curCTT.getSoTienToiDa() - soTienDaGiaoDich;
 

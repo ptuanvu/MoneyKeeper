@@ -3,12 +3,20 @@ package hcmus.vuphan.moneykeeper.model;
 import com.orm.SugarRecord;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.Random;
+import java.util.StringTokenizer;
 
 /**
  * Created by Join on 23/06/2016.
  */
 public class Giaodich extends SugarRecord implements Serializable{
+
+
+
     private  Long ID;
     String ID_HinhAnh;
     String ID_Thang;
@@ -22,8 +30,26 @@ public class Giaodich extends SugarRecord implements Serializable{
     String LoaiGiaodich;//gia tri = "Thu" và "Chi"
     int Tongtien;//= âm neu la chi và = dương nếu là thu.
     public Giaodich()
-    {
+    {}
 
+    public int getTongtien() {
+        return Tongtien;
+    }
+
+    public void setTongtien(int tongtien) {
+        Tongtien = tongtien;
+    }
+
+    public String getGiaoDichCoDinh() {
+        return GiaoDichCoDinh;
+    }
+
+    public String getLoaiGiaodich() {
+        return LoaiGiaodich;
+    }
+
+    public void setLoaiGiaodich(String loaiGiaodich) {
+        LoaiGiaodich = loaiGiaodich;
     }
 
     @Override
@@ -31,7 +57,43 @@ public class Giaodich extends SugarRecord implements Serializable{
         return super.getId();
     }
 
-    public Giaodich(String ID_HinhAnh,String ID_Thang,String ID_Catalog,String TenGiaoDich,String MoTaGiaoDich,String DiaDiem,Date ThoiGian,String GhiChu,String GiaoDichCoDinh,String loaiGiaodich , int tongtien)
+    public static List<Giaodich> GetRandomGiaoDich() {
+        List<Giaodich> giaodiches = new ArrayList<Giaodich>();
+        List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
+        List<Catalog> catalogs = Catalog.listAll(Catalog.class);
+        Random r = new Random();
+        Calendar calendar = Calendar.getInstance();
+
+        for(int i = 0 ; i < 200; i++) {
+            Date thoiGian = calendar.getTime();
+            int ngay = r.nextInt(30);
+            thoiGian.setDate(ngay);
+            int id_catalog = r.nextInt(catalogs.size());
+            int id_thang = r.nextInt(chiTieuThangs.size());
+            int tongTien = r.nextInt(100000);
+            boolean isAm = r.nextBoolean();
+            if (isAm) tongTien *= -1;
+            Giaodich giaodich = new Giaodich("227 NVC", String.valueOf(catalogs.get(id_catalog).getId()),String.valueOf(chiTieuThangs.get(id_thang).getId()), "Giao dịch thử nghiệm", "Giao dịch thử" + String.valueOf(i),thoiGian, tongTien );
+            giaodiches.add(giaodich);
+        }
+
+        return giaodiches;
+    }
+
+    public Giaodich(String diaDiem, String ID_Catalog, String ID_Thang, String moTaGiaoDich, String tenGiaoDich, Date thoiGian, int tongtien) {
+        DiaDiem = diaDiem;
+        this.ID_Catalog = ID_Catalog;
+        this.ID_Thang = ID_Thang;
+        MoTaGiaoDich = moTaGiaoDich;
+        TenGiaoDich = tenGiaoDich;
+        ThoiGian = thoiGian;
+        Tongtien = tongtien;
+        this.GhiChu ="";
+        this.LoaiGiaodich = "Chi";
+        this.ID_HinhAnh = "1";
+    }
+
+    public Giaodich(String ID_HinhAnh, String ID_Thang, String ID_Catalog, String TenGiaoDich, String MoTaGiaoDich, String DiaDiem, Date ThoiGian, String GhiChu, String GiaoDichCoDinh, String loaiGiaodich , int tongtien)
     {
         this.ID_HinhAnh=ID_HinhAnh;
         this.ID_Thang=ID_Thang;

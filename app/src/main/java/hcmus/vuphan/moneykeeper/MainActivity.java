@@ -39,11 +39,13 @@ import hcmus.vuphan.moneykeeper.scences.SignupFragment;
 import hcmus.vuphan.moneykeeper.scences.ThongKeFragment;
 import hcmus.vuphan.moneykeeper.scences.TinhTrangHienTai;
 
-public class MainActivity extends AppCompatActivity implements CUChiTieuThang.ChiTieuThangDiaglogListener, NavigationView.OnNavigationItemSelectedListener , CUGiaoDich.CUGiaoDichListener{
+public class MainActivity extends AppCompatActivity implements CUChiTieuThang.ChiTieuThangDiaglogListener, NavigationView.OnNavigationItemSelectedListener , CUGiaoDich.CUGiaoDichListener {
 
+    public final int TINHTRANG = 0;
+
+    int modeFragment = TINHTRANG;
 
     FrameLayout contentFrameLayout;
-    CameraFragment cameraFragment;
     CatalogFragment catalogFragment;
     LoginFragment loginFragment;
     SignupFragment signupFragment;
@@ -131,30 +133,51 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
+        boolean c = true;
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+            c = false;
         }
+        if (modeFragment != TINHTRANG) {
+            TinhTrangHienTai tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
+            getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
+            c = false;
+        }
+
+        if (c) super.onBackPressed();
     }
 
     public void InitGiaoDich() {
-        ChiTieuThang curCTT = MoneyHelper.GetChiTieuThangByMonth(MoneyHelper.GetCurrentMonth());
+//        ChiTieuThang curCTT = MoneyHelper.GetChiTieuThangByMonth(MoneyHelper.GetCurrentMonth());
+//
+//        Giaodich gd1 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",100000);
+//        Giaodich gd2 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Thu",50000);
+//        Giaodich gd3 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",1000000);
+//        Giaodich gd4 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Thu",1000000);
+//        Giaodich gd5 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",5000000);
+//        Giaodich gd6 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",1000000);
+//
+//        gd1.save();
+//        gd2.save();
+//        gd3.save();
+//        gd4.save();
+//        gd5.save();
+//        gd6.save();
 
-        Giaodich gd1 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",100000);
-        Giaodich gd2 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Thu",50000);
-        Giaodich gd3 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",1000000);
-        Giaodich gd4 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Thu",1000000);
-        Giaodich gd5 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",5000000);
-        Giaodich gd6 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",1000000);
+        Calendar calendar = Calendar.getInstance();
+        Date now = calendar.getTime();
+        for (int i = 0 ; i < 12; i ++) {
+            Date ctt = new Date(now.getYear(), i, 1);
+            if (i == now.getMonth()) continue;
+            ChiTieuThang chiTieuThang = new ChiTieuThang(0, ctt);
+            chiTieuThang.save();
+        }
 
-        gd1.save();
-        gd2.save();
-        gd3.save();
-        gd4.save();
-        gd5.save();
-        gd6.save();
-
+        List<Giaodich> gds = Giaodich.GetRandomGiaoDich();
+        for (Giaodich gd :
+                gds) {
+            gd.save();
+        }
     }
 
     public void InitCatalog() {
@@ -247,9 +270,6 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         Catalog c13 = new Catalog("Đầu tư", "Các khoản đầu tư", -1L);
         id = c13.save();
 
-        Catalog c14 = new Catalog("", "", -1L);
-        id = c14.save();
-
         Catalog c15 = new Catalog("", "", -1L);
         Catalog c16 = new Catalog("", "", -1L);
 
@@ -274,6 +294,7 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     }
 
 
+
     @Override
     public void OnChiTieuThangDialogFinish() {
         tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
@@ -284,6 +305,7 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        modeFragment = 1;
         switch (item.getItemId()) {
             case R.id.mnThemGiaoDich:
                 CUGiaoDich cuGiaoDich = CUGiaoDich.concreateInstance(null, this);

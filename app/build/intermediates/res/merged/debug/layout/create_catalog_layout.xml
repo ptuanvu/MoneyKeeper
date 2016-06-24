@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Title" >
-
         <requestFocus ></requestFocus>
 
     </EditText>
@@ -40,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
+            android:background="@color/buttonSuccess"
             android:text="OK"/>
 
         <Button
@@ -48,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
+            android:background="@color/colorPrimary"
             android:text="Cancel"/>
 
     </LinearLayout>

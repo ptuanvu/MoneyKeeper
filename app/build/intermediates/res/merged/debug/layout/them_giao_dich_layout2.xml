@@ -14,6 +14,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Số tiền"
+        android:inputType="numberSigned"
+        android:singleLine="true"
+        android:id="@+id/edtTotalPrice"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="Mô tả giao dịch"
         android:id="@+id/edtDescription"
         android:lines="2"
@@ -62,20 +70,12 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chi tiêu tháng: "/>
 
     <Spinner
         android:id="@+id/spnCTT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></Spinner>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Catalog: "/>
 
     <Spinner
         android:id="@+id/spnCatalog"
@@ -103,13 +103,6 @@
 
     </LinearLayout>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ghi chú"
-        android:id="@+id/edtNote"
-        android:lines="2"
-        android:gravity="top"/>
 
     <LinearLayout
         android:layout_width="match_parent"

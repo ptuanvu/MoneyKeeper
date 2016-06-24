@@ -37,7 +37,7 @@ import hcmus.vuphan.moneykeeper.model.Giaodich;
 public class CUGiaoDich extends DialogFragment {
     private static final String GIAO_DICH_PARAMS = "giao_dich";
     Button btnOK, btnCancel;
-    EditText edtTitle, edtDescription, edtNotes, edtThoiGian, edtLocation;
+    EditText edtTitle, edtDescription, edtThoiGian, edtLocation, edtTotalPrice;
     Spinner spnCatalog, spnCTT;
     ImageButton imbTime, imbLocation;
     CheckBox cbGiaoDichCoDinh;
@@ -72,7 +72,6 @@ public class CUGiaoDich extends DialogFragment {
         btnCancel = (Button) view.findViewById(R.id.btnCancel);
         edtTitle = (EditText) view.findViewById(R.id.edtTitle);
         edtDescription = (EditText) view.findViewById(R.id.edtDescription);
-        edtNotes = (EditText) view.findViewById(R.id.edtNote);
         edtThoiGian = (EditText) view.findViewById(R.id.edtThoiGian);
         edtLocation = (EditText) view.findViewById(R.id.edtLocation);
         spnCatalog = (Spinner) view.findViewById(R.id.spnCatalog);
@@ -80,6 +79,7 @@ public class CUGiaoDich extends DialogFragment {
         imbLocation = (ImageButton) view.findViewById(R.id.imbCurrentLocation);
         cbGiaoDichCoDinh = (CheckBox) view.findViewById(R.id.cbGiaoDichCoDinh);
         spnCTT = (Spinner) view.findViewById(R.id.spnCTT);
+        edtTotalPrice = (EditText) view.findViewById(R.id.edtTotalPrice);
 
         imbTime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,9 +130,9 @@ public class CUGiaoDich extends DialogFragment {
             String thoiGian = df.format(giaodich.getThoiGian());
             edtThoiGian.setText(thoiGian);
             edtLocation.setText(giaodich.getDiaDiem());
-            edtNotes.setText(giaodich.getGhiChu());
             spnCatalog.setSelection(MoneyHelper.FindOnList(catalogs, giaodich.getID_Catalog()));
             edtDescription.setText(giaodich.getMoTaGiaoDich());
+            edtTotalPrice.setText(String.valueOf(giaodich.getTongtien()));
             getDialog().setTitle("Chỉnh sửa chi tiêu tháng");
         } else {
             getDialog().setTitle("Tạo mới chi tiêu tháng");
@@ -142,32 +142,39 @@ public class CUGiaoDich extends DialogFragment {
         btnOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Giaodich giaoDich = null;
-                if (bundle != null) {
-                    giaoDich = (Giaodich) bundle.getSerializable(GIAO_DICH_PARAMS);
-                } else {
-                    giaoDich = new Giaodich();
-                }
+               if (edtTitle.getText().length() > 0 && edtThoiGian.getText().length() > 0 && edtTotalPrice.getText().length() > 0) {
+                   Giaodich giaoDich = null;
+                   if (bundle != null) {
+                       giaoDich = (Giaodich) bundle.getSerializable(GIAO_DICH_PARAMS);
+                   } else {
+                       giaoDich = new Giaodich();
+                   }
 
-                giaoDich.setTenGiaoDich(edtTitle.getText().toString());
-                giaoDich.setMoTaGiaoDich(edtDescription.getText().toString());
+                   giaoDich.setTenGiaoDich(edtTitle.getText().toString());
+                   giaoDich.setMoTaGiaoDich(edtDescription.getText().toString());
 
-                Catalog c = Catalog.find(Catalog.class, "title = ?", String.valueOf(spnCatalog.getSelectedItem())).get(0);
-                giaoDich.setID_Catalog(c.getId().toString());
+                   Catalog c = Catalog.find(Catalog.class, "title = ?", String.valueOf(spnCatalog.getSelectedItem())).get(0);
+                   giaoDich.setID_Catalog(c.getId().toString());
 
-                giaoDich.setThoiGian(new Date(edtThoiGian.getText().toString()));
-                giaoDich.setDiaDiem(edtLocation.getText().toString());
-                giaoDich.setGhiChu(edtNotes.getText().toString());
-                giaoDich.setID_HinhAnh("1");
-                giaoDich.setGiaoDichCoDinh(String.valueOf(cbGiaoDichCoDinh.isChecked()));
+                   giaoDich.setThoiGian(new Date(edtThoiGian.getText().toString()));
+                   giaoDich.setDiaDiem(edtLocation.getText().toString());
+                   giaoDich.setGhiChu("");
+                   giaoDich.setID_HinhAnh("1");
+                   giaoDich.setGiaoDichCoDinh(String.valueOf(cbGiaoDichCoDinh.isChecked()));
 
-                Long id = ids.get(ctts.indexOf(spnCTT.getSelectedItem()));
-                giaoDich.setID_Thang(String.valueOf(id));
+                   Long id = ids.get(ctts.indexOf(spnCTT.getSelectedItem()));
+                   giaoDich.setID_Thang(String.valueOf(id));
 
-                giaoDich.save();
-                ((CUGiaoDichListener)getActivity()).OnCUGiaoDichFinish();
+                   giaoDich.setTongtien(Integer.valueOf(edtTotalPrice.getText().toString()));
 
-                dismiss();
+                   giaoDich.save();
+                   ((CUGiaoDichListener)getActivity()).OnCUGiaoDichFinish();
+                   dismiss();
+               } else {
+                   Toast.makeText(getActivity(), "Vui lòng nhập các trường cần thiết", Toast.LENGTH_SHORT).show();
+               }
+
+
             }
         });
 

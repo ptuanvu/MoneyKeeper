@@ -44,16 +44,12 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_lines.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\themgiaodich_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\themgiaodich_layout.xml"
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signup_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\signup_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
-    },
-    {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signup_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\signup_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
@@ -90,10 +86,6 @@
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\catalog_item_layout.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\catalog_item_layout.xml"
-    },
-    {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\capnhatgd_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\capnhatgd_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
