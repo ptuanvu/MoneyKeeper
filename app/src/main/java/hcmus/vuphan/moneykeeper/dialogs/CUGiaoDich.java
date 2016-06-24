@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,6 +94,37 @@ public class CUGiaoDich extends DialogFragment {
             }
         });
 
+        edtThoiGian.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                Date d;
+                try {
+                    d = new Date(s.toString());
+                    List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
+                    for (ChiTieuThang ct :
+                            chiTieuThangs) {
+                        if (ct.getThoiGian().getMonth() == d.getMonth() && (ct.getThoiGian().getYear() == d.getYear() || ct.getThoiGian().getYear() == (d.getYear() + 1900))) {
+                            int index = ids.indexOf(ct.getId());
+                            spnCTT.setSelection(index);
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         imbLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -143,33 +176,39 @@ public class CUGiaoDich extends DialogFragment {
             @Override
             public void onClick(View v) {
                if (edtTitle.getText().length() > 0 && edtThoiGian.getText().length() > 0 && edtTotalPrice.getText().length() > 0) {
-                   Giaodich giaoDich = null;
-                   if (bundle != null) {
-                       giaoDich = (Giaodich) bundle.getSerializable(GIAO_DICH_PARAMS);
+                   Date d = new Date(edtThoiGian.getText().toString());
+                   if (MoneyHelper.CheckHaveCTT(d.getMonth(), d.getYear())) {
+                       Giaodich giaoDich = null;
+                       if (bundle != null) {
+                           giaoDich = (Giaodich) bundle.getSerializable(GIAO_DICH_PARAMS);
+                       } else {
+                           giaoDich = new Giaodich();
+                       }
+
+                       giaoDich.setTenGiaoDich(edtTitle.getText().toString());
+                       giaoDich.setMoTaGiaoDich(edtDescription.getText().toString());
+
+                       Catalog c = Catalog.find(Catalog.class, "title = ?", String.valueOf(spnCatalog.getSelectedItem())).get(0);
+                       giaoDich.setID_Catalog(c.getId().toString());
+
+                       giaoDich.setThoiGian(new Date(edtThoiGian.getText().toString()));
+                       giaoDich.setDiaDiem(edtLocation.getText().toString());
+                       giaoDich.setGhiChu("");
+                       giaoDich.setID_HinhAnh("1");
+                       giaoDich.setGiaoDichCoDinh(String.valueOf(cbGiaoDichCoDinh.isChecked()));
+
+                       Long id = ids.get(ctts.indexOf(spnCTT.getSelectedItem()));
+                       giaoDich.setID_Thang(String.valueOf(id));
+
+                       giaoDich.setTongtien(Integer.valueOf(edtTotalPrice.getText().toString()));
+
+                       giaoDich.save();
+                       ((CUGiaoDichListener)getActivity()).OnCUGiaoDichFinish();
+                       dismiss();
                    } else {
-                       giaoDich = new Giaodich();
+                       Toast.makeText(getActivity(), "Vui lòng tạo chi tiêu tháng cho tháng này", Toast.LENGTH_SHORT).show();
+                       dismiss();
                    }
-
-                   giaoDich.setTenGiaoDich(edtTitle.getText().toString());
-                   giaoDich.setMoTaGiaoDich(edtDescription.getText().toString());
-
-                   Catalog c = Catalog.find(Catalog.class, "title = ?", String.valueOf(spnCatalog.getSelectedItem())).get(0);
-                   giaoDich.setID_Catalog(c.getId().toString());
-
-                   giaoDich.setThoiGian(new Date(edtThoiGian.getText().toString()));
-                   giaoDich.setDiaDiem(edtLocation.getText().toString());
-                   giaoDich.setGhiChu("");
-                   giaoDich.setID_HinhAnh("1");
-                   giaoDich.setGiaoDichCoDinh(String.valueOf(cbGiaoDichCoDinh.isChecked()));
-
-                   Long id = ids.get(ctts.indexOf(spnCTT.getSelectedItem()));
-                   giaoDich.setID_Thang(String.valueOf(id));
-
-                   giaoDich.setTongtien(Integer.valueOf(edtTotalPrice.getText().toString()));
-
-                   giaoDich.save();
-                   ((CUGiaoDichListener)getActivity()).OnCUGiaoDichFinish();
-                   dismiss();
                } else {
                    Toast.makeText(getActivity(), "Vui lòng nhập các trường cần thiết", Toast.LENGTH_SHORT).show();
                }

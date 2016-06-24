@@ -62,7 +62,7 @@ MERGED from [com.android.support:support-v4:23.3.0] D:\WORKSPACE\AndroidStudio\M
 		ADDED from D:\WORKSPACE\AndroidStudio\MoneyKeeper\app\src\main\AndroidManifest.xml:13:9-43
 	android:theme
 		ADDED from D:\WORKSPACE\AndroidStudio\MoneyKeeper\app\src\main\AndroidManifest.xml:16:9-40
-activity#hcmus.vuphan.moneykeeper.MainActivity
+activity#hcmus.vuphan.moneykeeper.SplashScreen
 ADDED from D:\WORKSPACE\AndroidStudio\MoneyKeeper\app\src\main\AndroidManifest.xml:17:9-23:20
 	android:name
 		ADDED from D:\WORKSPACE\AndroidStudio\MoneyKeeper\app\src\main\AndroidManifest.xml:17:19-47
@@ -94,7 +94,7 @@ ADDED from D:\WORKSPACE\AndroidStudio\MoneyKeeper\app\src\main\AndroidManifest.x
 		ADDED from D:\WORKSPACE\AndroidStudio\MoneyKeeper\app\src\main\AndroidManifest.xml:33:13-33
 	android:name
 		ADDED from D:\WORKSPACE\AndroidStudio\MoneyKeeper\app\src\main\AndroidManifest.xml:32:13-37
-activity#hcmus.vuphan.moneykeeper.SplashScreen
+activity#hcmus.vuphan.moneykeeper.MainActivity
 ADDED from D:\WORKSPACE\AndroidStudio\MoneyKeeper\app\src\main\AndroidManifest.xml:35:9-36:53
 	android:name
 		ADDED from D:\WORKSPACE\AndroidStudio\MoneyKeeper\app\src\main\AndroidManifest.xml:36:13-41
