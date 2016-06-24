@@ -21,6 +21,11 @@ public class MoneyHelper {
 
     public static String MoneyParserWithoutVND(int money) {
         String sMoney = String.valueOf(money);
+        boolean amTien = false;
+        if (money < 0) {
+            sMoney = sMoney.substring(1);
+            amTien = true;
+        }
         String result = "";
         int rank = sMoney.length() / 3;
 
@@ -39,6 +44,10 @@ public class MoneyHelper {
             result += sMoney.substring(spos, epos);
         } else {
             result = sMoney;
+        }
+
+        if (amTien) {
+            result = "-" + result;
         }
         return result;
     }
@@ -75,6 +84,11 @@ public class MoneyHelper {
 
     public static String MoneyParser(int money) {
         String sMoney = String.valueOf(money);
+        boolean amTien = false;
+        if (money < 0) {
+            sMoney = sMoney.substring(1);
+            amTien = true;
+        }
         String result = "";
         int rank = sMoney.length() / 3;
 
@@ -95,6 +109,10 @@ public class MoneyHelper {
             result = sMoney;
         }
         result += " VND";
+
+        if (amTien) {
+            result = "-" + result;
+        }
         return result;
     }
 

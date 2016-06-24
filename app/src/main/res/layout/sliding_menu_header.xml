@@ -15,13 +15,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:textColor="#FFF"
-        android:text="Bài tập IA-09"/>
+        android:text="Quản lý chi tiêu"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:textColor="#FFF"
-        android:text="Left Menu"/>
+        android:text="Đồ án môn học nhóm BCS"/>
 
 </LinearLayout>
