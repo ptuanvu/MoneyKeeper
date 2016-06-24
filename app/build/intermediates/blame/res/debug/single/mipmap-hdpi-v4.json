@@ -1,9 +1,5 @@
 [
     {
-        "merged": "D:\\home\\monster\\Downloads\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "D:\\home\\monster\\Downloads\\MoneyKeeper\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }

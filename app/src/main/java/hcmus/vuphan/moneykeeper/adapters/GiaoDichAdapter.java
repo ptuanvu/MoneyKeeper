@@ -16,8 +16,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import hcmus.vuphan.moneykeeper.R;
+import hcmus.vuphan.moneykeeper.dialogs.CUGiaoDich;
 import hcmus.vuphan.moneykeeper.model.Giaodich;
-import hcmus.vuphan.moneykeeper.scences.CapnhatgdFragment;
 import hcmus.vuphan.moneykeeper.scences.ShowListGdFragment;
 
 /**
@@ -89,14 +89,7 @@ public class GiaoDichAdapter extends BaseAdapter {
         holder.Up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CapnhatgdFragment lwf = new CapnhatgdFragment();
-                Bundle b = new Bundle();
-                b.putLong("ID",listData.get(position).getId());
-                lwf.setArguments(b);
-                FragmentTransaction ft = context.getFragmentManager().beginTransaction();
-                ft.replace(R.id.contentFrameLayout, lwf);
-                ft.addToBackStack(null);
-                ft.commit();
+                CUGiaoDich cuGiaoDich = CUGiaoDich.concreateInstance(listData.get(position), context);
             }
         });
         return convertView;

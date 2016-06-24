@@ -19,6 +19,8 @@ public class Giaodich extends SugarRecord implements Serializable{
     Date ThoiGian;
     String GhiChu;
     String GiaoDichCoDinh;
+    String LoaiGiaodich;//gia tri = "Thu" và "Chi"
+    int Tongtien;//= âm neu la chi và = dương nếu là thu.
     public Giaodich()
     {
 
@@ -29,7 +31,7 @@ public class Giaodich extends SugarRecord implements Serializable{
         return super.getId();
     }
 
-    public Giaodich(String ID_HinhAnh,String ID_Thang,String ID_Catalog,String TenGiaoDich,String MoTaGiaoDich,String DiaDiem,Date ThoiGian,String GhiChu,String GiaoDichCoDinh)
+    public Giaodich(String ID_HinhAnh,String ID_Thang,String ID_Catalog,String TenGiaoDich,String MoTaGiaoDich,String DiaDiem,Date ThoiGian,String GhiChu,String GiaoDichCoDinh,String loaiGiaodich , int tongtien)
     {
         this.ID_HinhAnh=ID_HinhAnh;
         this.ID_Thang=ID_Thang;
@@ -40,6 +42,14 @@ public class Giaodich extends SugarRecord implements Serializable{
         this.ThoiGian=ThoiGian;
         this.GhiChu=GhiChu;
         this.GiaoDichCoDinh=GiaoDichCoDinh;
+        this.LoaiGiaodich = loaiGiaodich;
+        //List<Wallet> walletList = Wallet.listAll(Wallet.class);
+        this.Tongtien = tongtien;
+        Wallet wallet = Wallet.first(Wallet.class);
+        if(this.LoaiGiaodich.equals("Chi")){
+            tongtien = -tongtien;
+        }
+        wallet.Thanhtoan(tongtien);
     }
     public String getID_HinhAnh() { return ID_HinhAnh; }
     public void setID_HinhAnh(String ID_HinhAnh) { this.ID_HinhAnh=ID_HinhAnh; }

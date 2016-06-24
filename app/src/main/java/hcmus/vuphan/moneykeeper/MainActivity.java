@@ -1,51 +1,42 @@
 package hcmus.vuphan.moneykeeper;
 
-import android.Manifest;
 import android.app.FragmentTransaction;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Geocoder;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
-import android.support.v7.widget.Toolbar;
 
 import com.orm.SugarContext;
 
-import java.io.Console;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import hcmus.vuphan.moneykeeper.dialogs.CUChiTieuThang;
 import hcmus.vuphan.moneykeeper.dialogs.CUGiaoDich;
+import hcmus.vuphan.moneykeeper.dialogs.CUViTien;
 import hcmus.vuphan.moneykeeper.model.Catalog;
 import hcmus.vuphan.moneykeeper.model.ChiTieuThang;
 import hcmus.vuphan.moneykeeper.model.Giaodich;
 import hcmus.vuphan.moneykeeper.model.Wallet;
-import hcmus.vuphan.moneykeeper.scences.AddGdFragment;
 import hcmus.vuphan.moneykeeper.scences.CameraFragment;
-import hcmus.vuphan.moneykeeper.scences.CapnhatgdFragment;
 import hcmus.vuphan.moneykeeper.scences.CatalogFragment;
 import hcmus.vuphan.moneykeeper.scences.DanhSachCTT;
+import hcmus.vuphan.moneykeeper.scences.LichSuGiaoDichFragment;
 import hcmus.vuphan.moneykeeper.scences.ListwalletFragment;
 import hcmus.vuphan.moneykeeper.scences.LoginFragment;
 import hcmus.vuphan.moneykeeper.scences.ShowListGdFragment;
 import hcmus.vuphan.moneykeeper.scences.ShowwalletFragment;
 import hcmus.vuphan.moneykeeper.scences.SignupFragment;
+import hcmus.vuphan.moneykeeper.scences.ThongKeFragment;
 import hcmus.vuphan.moneykeeper.scences.TinhTrangHienTai;
 
 public class MainActivity extends AppCompatActivity implements CUChiTieuThang.ChiTieuThangDiaglogListener, NavigationView.OnNavigationItemSelectedListener , CUGiaoDich.CUGiaoDichListener{
@@ -59,9 +50,8 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     ListwalletFragment listwalletFragment;
     ShowwalletFragment showwalletFragment;
     ShowListGdFragment showListGdFragment;
-    AddGdFragment addGdFragment;
-    CapnhatgdFragment capnhatgdFragment;
     TinhTrangHienTai tinhTrangHienTai;
+    LichSuGiaoDichFragment lichSuGiaoDichFragment;
 
     //Cac thanh phan giao dien chinh
     Toolbar toolbar = null;
@@ -151,12 +141,12 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     public void InitGiaoDich() {
         ChiTieuThang curCTT = MoneyHelper.GetChiTieuThangByMonth(MoneyHelper.GetCurrentMonth());
 
-        Giaodich gd1 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
-        Giaodich gd2 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
-        Giaodich gd3 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
-        Giaodich gd4 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
-        Giaodich gd5 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
-        Giaodich gd6 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false");
+        Giaodich gd1 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",100000);
+        Giaodich gd2 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Thu",50000);
+        Giaodich gd3 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",1000000);
+        Giaodich gd4 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Thu",1000000);
+        Giaodich gd5 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",5000000);
+        Giaodich gd6 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",1000000);
 
         gd1.save();
         gd2.save();
@@ -280,8 +270,6 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         listwalletFragment = ListwalletFragment.createFragment(this);
         showwalletFragment = ShowwalletFragment.createFragment(this);
         showListGdFragment = ShowListGdFragment.createInstance(this);
-        addGdFragment = AddGdFragment.createInstance(this);
-        capnhatgdFragment = CapnhatgdFragment.createInstance(this);
 
     }
 
@@ -309,6 +297,17 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
                 DanhSachCTT danhSachCTT = DanhSachCTT.createFragment(this);
                 transaction.replace(R.id.contentFrameLayout, danhSachCTT).commit();
                 break;
+            case R.id.mnViTien:
+                CUViTien cuViTien = CUViTien.concreateInstance(null,this);
+                cuViTien.show(getFragmentManager(),"dialog");
+                break;
+            case R.id.mnLichSuGiaoDich:
+                lichSuGiaoDichFragment= LichSuGiaoDichFragment.createInstance(this);
+                getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, lichSuGiaoDichFragment).commit();
+                break;
+            case R.id.mnThongKe:
+                ThongKeFragment thongKeFrament = ThongKeFragment.createInstance(this);
+                getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout,thongKeFrament).commit();
         }
 
         if (drawer.isDrawerOpen(GravityCompat.START)) {
