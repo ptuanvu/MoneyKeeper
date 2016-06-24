@@ -85,20 +85,25 @@ public class CUChiTieuThang extends DialogFragment
             @Override
             public void onClick(View v) {
                 if (edtChiTieuToiDa.getText().toString().length() >= 1) {
-                    ChiTieuThang chiTieuThang = null;
-                    if (bundle != null) {
-                        chiTieuThang = (ChiTieuThang) bundle.getSerializable(CHI_TIEU_THANG_AGRS);
+                    int soTienToiDa = Integer.valueOf(edtChiTieuToiDa.getText().toString());
+                    if (soTienToiDa > 0 && soTienToiDa < 200000) {
+                        Toast.makeText(getActivity(), "Số tiền chi tiêu tháng quá ít, vui lòng kiểm tra lại.", Toast.LENGTH_SHORT).show();
                     } else {
-                        chiTieuThang = new ChiTieuThang();
+                        ChiTieuThang chiTieuThang = null;
+                        if (bundle != null) {
+                            chiTieuThang = (ChiTieuThang) bundle.getSerializable(CHI_TIEU_THANG_AGRS);
+                        } else {
+                            chiTieuThang = new ChiTieuThang();
+                        }
+
+
+                        chiTieuThang.setSoTienToiDa(Integer.valueOf(edtChiTieuToiDa.getText().toString()));
+                        chiTieuThang.setThoiGian(new Date(dpThang.getYear(), dpThang.getMonth(), 1));
+
+                        chiTieuThang.save();
+                        ((ChiTieuThangDiaglogListener)getActivity()).OnChiTieuThangDialogFinish();
+                        dismiss();
                     }
-
-
-                    chiTieuThang.setSoTienToiDa(Integer.valueOf(edtChiTieuToiDa.getText().toString()));
-                    chiTieuThang.setThoiGian(new Date(dpThang.getYear(), dpThang.getMonth(), 1));
-
-                    chiTieuThang.save();
-                    ((ChiTieuThangDiaglogListener)getActivity()).OnChiTieuThangDialogFinish();
-                    dismiss();
                 } else {
                     Toast.makeText(getActivity(), "Vui lòng nhập đầy đủ các thông tin cần thiết.", Toast.LENGTH_SHORT).show();
                 }

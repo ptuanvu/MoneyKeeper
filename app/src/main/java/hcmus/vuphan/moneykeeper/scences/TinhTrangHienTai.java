@@ -68,6 +68,7 @@ public class TinhTrangHienTai extends Fragment {
 
     private String GetCurrentStatus(Date time) {
         int month = time.getMonth();
+        int year = time.getYear();
         //List<ChiTieuThang> chiTieuThangs = ChiTieuThang.find(ChiTieuThang.class, "strftime(%m, thoi_gian) = ?", String.valueOf(month) );
         List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
 
@@ -80,12 +81,16 @@ public class TinhTrangHienTai extends Fragment {
             }
         }
 
+        if (curCTT.getSoTienToiDa() == 0)
+            return "";
+
         List<Giaodich> giaodiches = Giaodich.find(Giaodich.class, "idthang = ?", String.valueOf(curCTT.getId()));
         int soTienDaGiaoDich = 0;
         for (Giaodich giaodich :
                 giaodiches) {
             soTienDaGiaoDich -= giaodich.getTongtien();
         }
+
         int soTienHienTai = curCTT.getSoTienToiDa() - soTienDaGiaoDich;
 
         String gioiHan = MoneyHelper.MoneyParserWithoutVND(curCTT.getSoTienToiDa());
@@ -101,6 +106,7 @@ public class TinhTrangHienTai extends Fragment {
         tvCurMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTienhientai())));
         tvSaveMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTiendutru())));
         tvBankMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTientietkiem())));
+
         String currentStatus = GetCurrentStatus(calendar.getTime());
         tvStatus.setText(currentStatus);
 

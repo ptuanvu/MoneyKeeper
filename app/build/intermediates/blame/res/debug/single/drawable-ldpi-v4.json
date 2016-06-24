@@ -26,5 +26,9 @@
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_access_time_24dp.png",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_access_time_24dp.png"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_power_settings_new_black_24dp.png",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_power_settings_new_black_24dp.png"
     }
 ]

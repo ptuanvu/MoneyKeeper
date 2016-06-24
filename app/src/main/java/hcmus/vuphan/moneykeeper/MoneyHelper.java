@@ -29,7 +29,7 @@ public class MoneyHelper {
         String result = "";
         int rank = sMoney.length() / 3;
 
-        if (rank > 1) {
+        if (sMoney.length() > 3) {
             if (sMoney.length() % 2 == 0) {
                 rank--;
             }
@@ -92,7 +92,7 @@ public class MoneyHelper {
         String result = "";
         int rank = sMoney.length() / 3;
 
-        if (rank >= 1) {
+        if (sMoney.length() > 3) {
             if (sMoney.length() % 2 == 0) {
                 rank--;
             }

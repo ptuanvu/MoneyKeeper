@@ -12,8 +12,7 @@
 
     <include layout="@layout/main_layout_include"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nvLeftMenu"

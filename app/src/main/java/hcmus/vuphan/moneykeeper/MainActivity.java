@@ -11,7 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.orm.SugarContext;
@@ -27,6 +29,7 @@ import hcmus.vuphan.moneykeeper.model.Catalog;
 import hcmus.vuphan.moneykeeper.model.ChiTieuThang;
 import hcmus.vuphan.moneykeeper.model.Giaodich;
 import hcmus.vuphan.moneykeeper.model.Wallet;
+import hcmus.vuphan.moneykeeper.scences.AboutFragment;
 import hcmus.vuphan.moneykeeper.scences.CameraFragment;
 import hcmus.vuphan.moneykeeper.scences.CatalogFragment;
 import hcmus.vuphan.moneykeeper.scences.DanhSachCTT;
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
 
     int modeFragment = TINHTRANG;
 
+    ImageButton imbExit;
     FrameLayout contentFrameLayout;
     CatalogFragment catalogFragment;
     LoginFragment loginFragment;
@@ -124,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     private void SettingUpUI() {
 
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
@@ -142,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         if (modeFragment != TINHTRANG) {
             TinhTrangHienTai tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
             getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
+            modeFragment = TINHTRANG;
             c = false;
         }
 
@@ -168,23 +174,27 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
 
     private void CreateListenerEvent() {
         nvLeftMenu.setNavigationItemSelectedListener(this);
+        imbExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void InitID() {
         contentFrameLayout = (FrameLayout) findViewById(R.id.contentFrameLayout);
         nvLeftMenu = (NavigationView) findViewById(R.id.nvLeftMenu);
         drawer = (DrawerLayout) findViewById(R.id.drawer);
-        toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        toolbar = (Toolbar) findViewById(R.id.tbMyToolbar);
         catalogFragment = CatalogFragment.createFragment(this);
         loginFragment = LoginFragment.createFragment(this);
         signupFragment = SignupFragment.createFragment(this);
         listwalletFragment = ListwalletFragment.createFragment(this);
         showwalletFragment = ShowwalletFragment.createFragment(this);
         showListGdFragment = ShowListGdFragment.createInstance(this);
-
+        imbExit = (ImageButton) findViewById(R.id.imbExit);
     }
-
-
 
     @Override
     public void OnChiTieuThangDialogFinish() {
@@ -225,6 +235,11 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
             case R.id.mnThongKe:
                 ThongKeFragment thongKeFrament = ThongKeFragment.createInstance(this);
                 getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout,thongKeFrament).commit();
+                break;
+            case R.id.mnAbout:
+                AboutFragment aboutFragment = AboutFragment.concreateFragment(this);
+                transaction.replace(R.id.contentFrameLayout, aboutFragment).commit();
+                break;
         }
 
         if (drawer.isDrawerOpen(GravityCompat.START)) {

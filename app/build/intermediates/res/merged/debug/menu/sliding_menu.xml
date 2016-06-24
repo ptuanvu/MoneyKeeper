@@ -22,6 +22,7 @@
     <item android:title="Others" android:checkableBehavior="single">
         <menu>
             <item android:id="@+id/mnShare" android:title="Chia sẽ trạng thái" />
+            <item android:id="@+id/mnAbout" android:title="Thông tin nhóm" />
         </menu>
     </item>
 
