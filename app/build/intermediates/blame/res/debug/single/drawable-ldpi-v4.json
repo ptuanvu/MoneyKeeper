@@ -4,8 +4,20 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_verified_user_24dp.png"
     },
     {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_verified_user_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_verified_user_24dp.png"
+    },
+    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_add_circle_24dp.png",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_add_circle_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_cancel_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_cancel_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_add_circle_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_add_circle_24dp.png"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_warning_24dp.png",
@@ -16,15 +28,31 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_cancel_24dp.png"
     },
     {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_my_location_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_my_location_24dp.png"
+    },
+    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_my_location_24dp.png",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_my_location_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_done_all_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_done_all_24dp.png"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_done_all_24dp.png",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_done_all_24dp.png"
     },
     {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_access_time_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_access_time_24dp.png"
+    },
+    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_access_time_24dp.png",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_access_time_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_warning_24dp.png",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_warning_24dp.png"
     }
 ]
