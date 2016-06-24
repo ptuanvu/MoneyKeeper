@@ -21,6 +21,7 @@ public class ChiTieuThang extends SugarRecord implements Serializable{
     public ChiTieuThang(int soTienToiDa, Date thoiGian) {
         this.soTienToiDa = soTienToiDa;
         this.thoiGian = thoiGian;
+
     }
 
     public int getSoTienToiDa() {

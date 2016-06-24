@@ -14,6 +14,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -21,7 +22,9 @@ import android.support.v7.widget.Toolbar;
 
 import com.orm.SugarContext;
 
+import java.io.Console;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -37,6 +40,7 @@ import hcmus.vuphan.moneykeeper.scences.AddGdFragment;
 import hcmus.vuphan.moneykeeper.scences.CameraFragment;
 import hcmus.vuphan.moneykeeper.scences.CapnhatgdFragment;
 import hcmus.vuphan.moneykeeper.scences.CatalogFragment;
+import hcmus.vuphan.moneykeeper.scences.DanhSachCTT;
 import hcmus.vuphan.moneykeeper.scences.ListwalletFragment;
 import hcmus.vuphan.moneykeeper.scences.LoginFragment;
 import hcmus.vuphan.moneykeeper.scences.ShowListGdFragment;
@@ -85,6 +89,13 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
             editorPref.commit();
         }
 
+        global.dfMonthAndYear.setCalendar(Calendar.getInstance());
+
+        Calendar cal = Calendar.getInstance();
+        cal.clear();
+        cal.set(Calendar.YEAR, 2000);
+        global.dfMonthAndYear.set2DigitYearStart(cal.getTime());
+
         // Khoi tao ID cho cac thanh phan
         InitID();
 
@@ -100,6 +111,8 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         Date curDate = calendar.getTime();
         int curMonth = curDate.getMonth();
 
+        String thoigian = global.dfMonthAndYear.format(calendar.getTime());
+        Log.d("Main ACtivity", thoigian);
 
         List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
         Boolean haveChiTieuThang = false;
@@ -295,6 +308,20 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
                 CUGiaoDich cuGiaoDich = CUGiaoDich.concreateInstance(null, this);
                 cuGiaoDich.show(getFragmentManager(), "dialog");
                 break;
+            case R.id.mnCatalog:
+                CatalogFragment catalogFragment = CatalogFragment.createFragment(this);
+                transaction.replace(R.id.contentFrameLayout, catalogFragment).commit();
+                break;
+            case R.id.mnChiTieuThang:
+                DanhSachCTT danhSachCTT = DanhSachCTT.createFragment(this);
+                transaction.replace(R.id.contentFrameLayout, danhSachCTT).commit();
+                break;
+        }
+
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
         }
         return false;
     }

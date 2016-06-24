@@ -15,9 +15,11 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -72,7 +74,7 @@ public class CUChiTieuThang extends DialogFragment
         if (bundle != null) {
             ChiTieuThang chiTieuThang = (ChiTieuThang) bundle.getSerializable(CHI_TIEU_THANG_AGRS);
             dpThang.updateDate(chiTieuThang.getThoiGian().getYear(), chiTieuThang.getThoiGian().getMonth(), chiTieuThang.getThoiGian().getDay());
-            edtChiTieuToiDa.setText(chiTieuThang.getSoTienToiDa());
+            edtChiTieuToiDa.setText(String.valueOf(chiTieuThang.getSoTienToiDa()));
             getDialog().setTitle("Chỉnh sửa chi tiêu tháng");
         } else {
             getDialog().setTitle("Tạo mới chi tiêu tháng");
@@ -82,19 +84,24 @@ public class CUChiTieuThang extends DialogFragment
         btnOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ChiTieuThang chiTieuThang = null;
-                if (bundle != null) {
-                    chiTieuThang = (ChiTieuThang) bundle.getSerializable(CHI_TIEU_THANG_AGRS);
+                if (edtChiTieuToiDa.getText().toString().length() >= 1) {
+                    ChiTieuThang chiTieuThang = null;
+                    if (bundle != null) {
+                        chiTieuThang = (ChiTieuThang) bundle.getSerializable(CHI_TIEU_THANG_AGRS);
+                    } else {
+                        chiTieuThang = new ChiTieuThang();
+                    }
+
+
+                    chiTieuThang.setSoTienToiDa(Integer.valueOf(edtChiTieuToiDa.getText().toString()));
+                    chiTieuThang.setThoiGian(new Date(dpThang.getYear(), dpThang.getMonth(), 1));
+
+                    chiTieuThang.save();
+                    ((ChiTieuThangDiaglogListener)getActivity()).OnChiTieuThangDialogFinish();
+                    dismiss();
                 } else {
-                    chiTieuThang = new ChiTieuThang();
+                    Toast.makeText(getActivity(), "Vui lòng nhập đầy đủ các thông tin cần thiết.", Toast.LENGTH_SHORT).show();
                 }
-
-                chiTieuThang.setSoTienToiDa(Integer.valueOf(edtChiTieuToiDa.getText().toString()));
-                chiTieuThang.setThoiGian(new Date(dpThang.getYear(), dpThang.getMonth(), 1));
-
-                chiTieuThang.save();
-                ((ChiTieuThangDiaglogListener)getActivity()).OnChiTieuThangDialogFinish();
-                dismiss();
             }
         });
 

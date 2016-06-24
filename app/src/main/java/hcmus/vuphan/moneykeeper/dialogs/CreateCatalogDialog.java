@@ -96,7 +96,6 @@ public class CreateCatalogDialog extends DialogFragment implements View.OnClickL
                     idParrent = c.getIdParrent();
                 }
                 OnCreateCatalogOK(edtTitle.getText().toString(), edtDescription.getText().toString(), idParrent);
-                dismiss();
                 break;
             case R.id.btnCancel:
                 dismiss();
@@ -107,18 +106,29 @@ public class CreateCatalogDialog extends DialogFragment implements View.OnClickL
     private void OnCreateCatalogOK(String s, String s1, Long s3) {
 
 
-        Bundle bundle = getArguments();
+        if (CheckInput()) {
+            Bundle bundle = getArguments();
 
-        Catalog catalog = null;
-        if (bundle != null) {
-            catalog = (Catalog) bundle.getSerializable(INPUT_CATALOG);
-            catalog.setTitle(s);
-            catalog.setDescription(s1);
+            Catalog catalog = null;
+            if (bundle != null) {
+                catalog = (Catalog) bundle.getSerializable(INPUT_CATALOG);
+                catalog.setTitle(s);
+                catalog.setDescription(s1);
+            } else {
+                catalog = new Catalog(s, s1, s3);
+            }
+            catalog.save();
+            CatalogFragment.RefreshRecyclerViewCatalogs();
+            dismiss();
         } else {
-            catalog = new Catalog(s, s1, s3);
+            Toast.makeText(getActivity(), "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
         }
-        catalog.save();
-        CatalogFragment.RefreshRecyclerViewCatalogs();
 
+    }
+
+    private boolean CheckInput() {
+        if (edtTitle.getText().toString().length() >= 1)
+            return true;
+        return false;
     }
 }
