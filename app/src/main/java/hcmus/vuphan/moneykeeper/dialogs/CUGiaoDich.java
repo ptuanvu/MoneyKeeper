@@ -32,6 +32,7 @@ import hcmus.vuphan.moneykeeper.global;
 import hcmus.vuphan.moneykeeper.model.Catalog;
 import hcmus.vuphan.moneykeeper.model.ChiTieuThang;
 import hcmus.vuphan.moneykeeper.model.Giaodich;
+import hcmus.vuphan.moneykeeper.model.Wallet;
 
 /**
  * Created by monster on 24/06/2016.
@@ -203,7 +204,11 @@ public class CUGiaoDich extends DialogFragment {
                        giaoDich.setTongtien(Integer.valueOf(edtTotalPrice.getText().toString()));
 
                        giaoDich.save();
-                       ((CUGiaoDichListener)getActivity()).OnCUGiaoDichFinish();
+                        Wallet curWallet = MoneyHelper.GetCurWallet();
+                       int curMoney = Integer.valueOf(curWallet.getTienhientai()) + giaoDich.getTongtien();
+                       curWallet.setTienhientai(String.valueOf(curMoney));
+                       curWallet.save();
+                            ((CUGiaoDichListener) getActivity()).OnCUGiaoDichFinish();
                        dismiss();
                    } else {
                        Toast.makeText(getActivity(), "Vui lòng tạo chi tiêu tháng cho tháng này", Toast.LENGTH_SHORT).show();
