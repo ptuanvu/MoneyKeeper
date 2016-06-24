@@ -4,20 +4,268 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_action.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_lines.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_content_include.xml"
     },
     {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rutguitien_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\rutguitien_layout.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lichsu_giaodich.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\lichsu_giaodich.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listwallet_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\listwallet_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\catalog_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\catalog_layout.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\catalog_item_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\catalog_item_layout.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listwalletitem.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\listwalletitem.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\showwallet_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\showwallet_layout.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\login_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash_screen.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\catalog_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\catalog_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lichsu_giaodich.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\lichsu_giaodich.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\camera_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\camera_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listgd_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\listgd_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listwallet_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\listwallet_layout.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_layout_include.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\main_layout_include.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cu_chi_tieu_thang.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\cu_chi_tieu_thang.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listwalletitem.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\listwalletitem.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_action.xml"
+    },
+    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sliding_menu_header.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\sliding_menu_header.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\them_giao_dich_layout2.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\them_giao_dich_layout2.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tinh_trang_hien_tai.xml",
@@ -32,40 +280,61 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_multichoice_material.xml"
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_lines.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
+<<<<<<< HEAD
+=======
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_gd_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\item_gd_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signup_layout.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\signup_layout.xml"
     },
     {
+>>>>>>> 16ede7d80e2e9c88ceff35690bfd51fb1e645db9
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+<<<<<<< HEAD
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signup_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\signup_layout.xml"
+    },
+    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\activity_main.xml"
+=======
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple.xml"
+>>>>>>> 16ede7d80e2e9c88ceff35690bfd51fb1e645db9
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\about_me_layout.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\about_me_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_expanded_menu_layout.xml"
+=======
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\activity_main.xml"
+>>>>>>> 16ede7d80e2e9c88ceff35690bfd51fb1e645db9
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\them_giao_dich_layout2.xml",
@@ -76,8 +345,16 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_item_material.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sliding_menu_header.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\sliding_menu_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tinh_trang_hien_tai.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\tinh_trang_hien_tai.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
@@ -88,40 +365,44 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\lichsu_giaodich_item.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\catalog_item_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\catalog_item_layout.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\login_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listwalletitem.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\listwalletitem.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_cancel_action.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_tab_text.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\showwallet_layout.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\showwallet_layout.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\login_layout.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\create_catalog_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\create_catalog_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_layout_include.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\main_layout_include.xml"
-    },
-    {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thongke_layout.xml",
@@ -132,16 +413,36 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_header.xml"
     },
     {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rutguitien_layout.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\rutguitien_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\catalog_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\catalog_layout.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lichsu_giaodich_item.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\lichsu_giaodich_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
@@ -160,8 +461,8 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\create_catalog_layout.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
@@ -172,60 +473,64 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_big_media.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listgd_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\listgd_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_time.xml"
-    },
-    {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lichsu_giaodich.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\lichsu_giaodich.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thongke_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\thongke_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_menu.xml"
     },
     {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
-    },
-    {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_tab_text.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_chronometer.xml"
-    },
-    {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listgd_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\listgd_layout.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\catalog_item_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\catalog_item_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
@@ -236,26 +541,23 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listwallet_layout.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\listwallet_layout.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signup_layout.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\signup_layout.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cu_chi_tieu_thang.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\cu_chi_tieu_thang.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cu_chi_tieu_thang.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\src\\main\\res\\layout\\cu_chi_tieu_thang.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_view.xml"
     },
@@ -266,14 +568,18 @@
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_separator.xml"
+=======
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_icon.xml"
+>>>>>>> 16ede7d80e2e9c88ceff35690bfd51fb1e645db9
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_menu.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\camera_layout.xml",
@@ -286,6 +592,10 @@
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_gd_layout.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\item_gd_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\Join\\Desktop\\aaa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
