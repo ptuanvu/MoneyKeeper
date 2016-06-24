@@ -26,6 +26,7 @@ import java.util.Date;
 import java.util.List;
 
 import hcmus.vuphan.moneykeeper.MainActivity;
+import hcmus.vuphan.moneykeeper.MoneyHelper;
 import hcmus.vuphan.moneykeeper.R;
 import hcmus.vuphan.moneykeeper.global;
 import hcmus.vuphan.moneykeeper.model.ChiTieuThang;
@@ -33,8 +34,7 @@ import hcmus.vuphan.moneykeeper.model.ChiTieuThang;
 /**
  * Created by monster on 23/06/2016.
  */
-public class CUChiTieuThang extends DialogFragment
-{
+public class CUChiTieuThang extends DialogFragment {
     private static final String CHI_TIEU_THANG_AGRS = "chi_tieu_thang";
     Button btnOK, btnCancel;
     EditText edtChiTieuToiDa;
@@ -85,25 +85,30 @@ public class CUChiTieuThang extends DialogFragment
             @Override
             public void onClick(View v) {
                 if (edtChiTieuToiDa.getText().toString().length() >= 1) {
-                    int soTienToiDa = Integer.valueOf(edtChiTieuToiDa.getText().toString());
-                    if (soTienToiDa > 0 && soTienToiDa < 200000) {
-                        Toast.makeText(getActivity(), "Số tiền chi tiêu tháng quá ít, vui lòng kiểm tra lại.", Toast.LENGTH_SHORT).show();
-                    } else {
-                        ChiTieuThang chiTieuThang = null;
-                        if (bundle != null) {
-                            chiTieuThang = (ChiTieuThang) bundle.getSerializable(CHI_TIEU_THANG_AGRS);
+                    int month = dpThang.getMonth();
+                    int year = dpThang.getYear();
+                    if (!MoneyHelper.CheckHaveCTT(month, year)) {
+                        int soTienToiDa = Integer.valueOf(edtChiTieuToiDa.getText().toString());
+                        if (soTienToiDa > 0 && soTienToiDa < 200000) {
+                            Toast.makeText(getActivity(), "Số tiền chi tiêu tháng quá ít, vui lòng kiểm tra lại.", Toast.LENGTH_SHORT).show();
                         } else {
-                            chiTieuThang = new ChiTieuThang();
+                            ChiTieuThang chiTieuThang = null;
+                            if (bundle != null) {
+                                chiTieuThang = (ChiTieuThang) bundle.getSerializable(CHI_TIEU_THANG_AGRS);
+                            } else {
+                                chiTieuThang = new ChiTieuThang();
+                            }
+
+                            chiTieuThang.setSoTienToiDa(Integer.valueOf(edtChiTieuToiDa.getText().toString()));
+                            chiTieuThang.setThoiGian(new Date(dpThang.getYear(), dpThang.getMonth(), 1));
+
+                            chiTieuThang.save();
+                            ((ChiTieuThangDiaglogListener) getActivity()).OnChiTieuThangDialogFinish();
                         }
-
-
-                        chiTieuThang.setSoTienToiDa(Integer.valueOf(edtChiTieuToiDa.getText().toString()));
-                        chiTieuThang.setThoiGian(new Date(dpThang.getYear(), dpThang.getMonth(), 1));
-
-                        chiTieuThang.save();
-                        ((ChiTieuThangDiaglogListener)getActivity()).OnChiTieuThangDialogFinish();
-                        dismiss();
+                    } else {
+                        Toast.makeText(getActivity(), "Kế hoạch chi tiêu cho tháng này đã tồn tại", Toast.LENGTH_SHORT).show();
                     }
+                    dismiss();
                 } else {
                     Toast.makeText(getActivity(), "Vui lòng nhập đầy đủ các thông tin cần thiết.", Toast.LENGTH_SHORT).show();
                 }

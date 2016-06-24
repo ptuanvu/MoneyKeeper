@@ -19,6 +19,33 @@ public class MoneyHelper {
         return calendar.getTime().getMonth();
     }
 
+    public static boolean CheckHaveCTT(int month, int year) {
+        List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
+        for (ChiTieuThang ctt: chiTieuThangs
+             ) {
+            if (ctt.getThoiGian().getMonth() == month && (ctt.getThoiGian().getYear() == year || ctt.getThoiGian().getYear() == (year + 1900)))
+                return true;
+        }
+
+        return  false;
+    }
+
+    public static String ToFixedDate(String a) {
+        int k = a.indexOf("/");
+        String month = a.substring(0, k);
+        String year = a.substring(k + 1);
+        year = "20" + year;
+        return month + "/" + year;
+    }
+
+    public static String FixedToDate(String a) {
+        int k = a.indexOf("/");
+        String month = a.substring(0, k);
+        String year = a.substring(k + 3);
+        return month + "/" + year;
+    }
+
+
     public static String MoneyParserWithoutVND(int money) {
         String sMoney = String.valueOf(money);
         boolean amTien = false;

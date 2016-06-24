@@ -19,6 +19,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import hcmus.vuphan.moneykeeper.MoneyHelper;
 import hcmus.vuphan.moneykeeper.R;
 import hcmus.vuphan.moneykeeper.global;
 import hcmus.vuphan.moneykeeper.model.Catalog;
@@ -54,6 +55,8 @@ public class CTTAdapter extends RecyclerView.Adapter<CTTAdapter.CTTHolder> {
         Date date = chiTieuThang.getThoiGian();
 
         String thoiGian2 = global.dfMonthAndYear.format(date);
+        thoiGian2 = MoneyHelper.ToFixedDate(thoiGian2);
+
         holder.tvTitle.setText(thoiGian2);
         holder.imbDelete.setOnClickListener(new View.OnClickListener() {
             @Override

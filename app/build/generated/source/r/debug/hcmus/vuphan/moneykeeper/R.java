@@ -2526,7 +2526,7 @@ containing a value of this type.
         public static final int fill_horizontal=0x7f0c002f;
         public static final int fill_vertical=0x7f0c0022;
         public static final int fixed=0x7f0c0038;
-        public static final int gvGraph=0x7f0c00d2;
+        public static final int gvGraph=0x7f0c00d3;
         public static final int home=0x7f0c0004;
         public static final int homeAsUp=0x7f0c000f;
         public static final int icon=0x7f0c0042;
@@ -2547,22 +2547,23 @@ containing a value of this type.
         public static final int listView=0x7f0c0095;
         public static final int listView2=0x7f0c0091;
         public static final int list_item=0x7f0c0041;
+        public static final int listthongke=0x7f0c00cc;
         public static final int listwallet=0x7f0c0096;
         public static final int llPreview=0x7f0c006e;
         public static final int media_actions=0x7f0c00a9;
         public static final int middle=0x7f0c0032;
         public static final int mini=0x7f0c0030;
-        public static final int mnAbout=0x7f0c00dd;
-        public static final int mnCatalog=0x7f0c00d9;
-        public static final int mnChiTieuThang=0x7f0c00d7;
-        public static final int mnExport=0x7f0c00db;
-        public static final int mnImport=0x7f0c00da;
-        public static final int mnLichSuGiaoDich=0x7f0c00d5;
-        public static final int mnLichSuThang=0x7f0c00d6;
-        public static final int mnShare=0x7f0c00dc;
-        public static final int mnThemGiaoDich=0x7f0c00d3;
-        public static final int mnThongKe=0x7f0c00d8;
-        public static final int mnViTien=0x7f0c00d4;
+        public static final int mnAbout=0x7f0c00de;
+        public static final int mnCatalog=0x7f0c00da;
+        public static final int mnChiTieuThang=0x7f0c00d8;
+        public static final int mnExport=0x7f0c00dc;
+        public static final int mnImport=0x7f0c00db;
+        public static final int mnLichSuGiaoDich=0x7f0c00d6;
+        public static final int mnLichSuThang=0x7f0c00d7;
+        public static final int mnShare=0x7f0c00dd;
+        public static final int mnThemGiaoDich=0x7f0c00d4;
+        public static final int mnThongKe=0x7f0c00d9;
+        public static final int mnViTien=0x7f0c00d5;
         public static final int multiply=0x7f0c0027;
         public static final int namewallet=0x7f0c00b6;
         public static final int navigation_header_container=0x7f0c0081;
@@ -2580,6 +2581,7 @@ containing a value of this type.
         public static final int rcvCatalogs=0x7f0c0074;
         public static final int resmoneyitem=0x7f0c00b8;
         public static final int right=0x7f0c0024;
+        public static final int rowTextView=0x7f0c00ce;
         public static final int savingmoneyitem=0x7f0c00b9;
         public static final int screen=0x7f0c0028;
         public static final int scroll=0x7f0c0018;
@@ -2635,13 +2637,13 @@ containing a value of this type.
         public static final int top=0x7f0c0026;
         public static final int topPanel=0x7f0c0047;
         public static final int touch_outside=0x7f0c007d;
-        public static final int tvBankMoney=0x7f0c00d1;
-        public static final int tvCurMoney=0x7f0c00ce;
+        public static final int tvBankMoney=0x7f0c00d2;
+        public static final int tvCurMoney=0x7f0c00cf;
         public static final int tvDescription=0x7f0c0072;
         public static final int tvName=0x7f0c0087;
         public static final int tvPrice=0x7f0c0088;
-        public static final int tvSaveMoney=0x7f0c00d0;
-        public static final int tvStatus=0x7f0c00cf;
+        public static final int tvSaveMoney=0x7f0c00d1;
+        public static final int tvStatus=0x7f0c00d0;
         public static final int tvTime=0x7f0c0089;
         public static final int tvTitle=0x7f0c0071;
         public static final int tvURL=0x7f0c006d;
@@ -2650,7 +2652,6 @@ containing a value of this type.
         public static final int txtTen=0x7f0c008b;
         public static final int txtTenItem=0x7f0c0093;
         public static final int txtcatalog=0x7f0c008c;
-        public static final int txtviewThongke=0x7f0c00cc;
         public static final int up=0x7f0c0009;
         public static final int updatebt=0x7f0c00ba;
         public static final int useLogo=0x7f0c0014;
@@ -2744,7 +2745,8 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f040045;
         public static final int them_giao_dich_layout2=0x7f040046;
         public static final int thongke_layout=0x7f040047;
-        public static final int tinh_trang_hien_tai=0x7f040048;
+        public static final int thongkeitem_layout=0x7f040048;
+        public static final int tinh_trang_hien_tai=0x7f040049;
     }
     public static final class menu {
         public static final int sliding_menu=0x7f0d0000;
