@@ -72,32 +72,51 @@ public class CUViTien extends DialogFragment {
                 Wallet temp= Wallet.first(Wallet.class);
                 if(temp!=null)
                 {
-                    tenvi.setText(temp.getName());
-                    hientai.setText(temp.getTienhientai());
-                    dutru.setText(temp.getTiendutru());
-                    tietkiem.setText(temp.getTientietkiem());
+                    temp.setName(upname);
+                    temp.setTienhientai(uphientai);
+                    temp.setTiendutru(updutru);
+                    temp.setTientietkiem(uptietkiem);
+                    temp.save();
+                    Toast.makeText(getDialog().getContext(), "Cap nhat thanh cong", Toast.LENGTH_SHORT).show();
                 }
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                dismiss();
             }
         });
 
         btnguitien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                CUGuitien cuGuitien = CUGuitien.concreateInstance(null,null);
+                cuGuitien.show(getFragmentManager(),"dialog");
+                Wallet temp= Wallet.first(Wallet.class);
+                if(temp!=null)
+                {
+                    tenvi.setText(temp.getName());
+                    hientai.setText(temp.getTienhientai());
+                    dutru.setText(temp.getTiendutru());
+                    tietkiem.setText(temp.getTientietkiem());
+                }
 
             }
         });
         btnruttien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                CURuttien cuRuttien = CURuttien.concreateInstance(null,null);
+                cuRuttien.show(getFragmentManager(),"dialog");
+                Wallet temp= Wallet.first(Wallet.class);
+                if(temp!=null)
+                {
+                    tenvi.setText(temp.getName());
+                    hientai.setText(temp.getTienhientai());
+                    dutru.setText(temp.getTiendutru());
+                    tietkiem.setText(temp.getTientietkiem());
+                }
 
 
             }

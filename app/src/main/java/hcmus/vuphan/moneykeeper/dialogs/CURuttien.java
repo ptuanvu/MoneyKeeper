@@ -40,12 +40,13 @@ public class CURuttien extends DialogFragment {
                 int sotien = Integer.parseInt(edttiengui.getText().toString());
                 wallet.rutTiendutru(sotien);
                 wallet.save();
+                dismiss();
             }
         });
         btncancelguitien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                return;
+                dismiss();
             }
         });
 

@@ -19,10 +19,10 @@ import hcmus.vuphan.moneykeeper.model.Wallet;
 public class CUGuitien extends DialogFragment{
     EditText edttiengui;
     Button btnokguitien,btncancelguitien;
-    public static CURuttien concreateInstance(Wallet cur, Context context) {
-        CURuttien cuRuttien = new CURuttien();
+    public static CUGuitien concreateInstance(Wallet cur, Context context) {
+        CUGuitien cuGuitien = new CUGuitien();
 
-        return cuRuttien;
+        return cuGuitien;
     }
 
     @Nullable
@@ -40,12 +40,13 @@ public class CUGuitien extends DialogFragment{
                 int sotien = Integer.parseInt(edttiengui.getText().toString());
                 wallet.themTiendutru(sotien);
                 wallet.save();
+                dismiss();
             }
         });
         btncancelguitien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                return;
+                dismiss();
             }
         });
 
