@@ -56,6 +56,35 @@ public class Wallet extends SugarRecord {
         tiendutru = dutru;
         tientietkiem = tietkiem;
     }
+    public boolean rutTiendutru(int sotien)
+    {
+
+        if(Integer.parseInt(this.tiendutru) < sotien){
+            return  false;
+        }
+        int tempdutru = (Integer.parseInt(this.tiendutru) - sotien);
+        this.setTiendutru(Integer.toString(tempdutru));
+        int temptienhientai = Integer.parseInt(this.tienhientai)+sotien;
+        this.setTienhientai(Integer.toString(temptienhientai));
+        return true;
+    }
+    public boolean themTiendutru(int sotien)
+    {
+
+        if(Integer.parseInt(this.tienhientai) < sotien){
+            return  false;
+        }
+        int temptienhientai = Integer.parseInt(this.tienhientai)-sotien;
+        this.setTienhientai(Integer.toString(temptienhientai));
+        int tempdutru = (Integer.parseInt(this.tiendutru) + sotien);
+        this.setTiendutru(Integer.toString(tempdutru));
+        return true;
+    }
+    public void Thanhtoan(int sotien){
+        int temp = Integer.parseInt(this.tienhientai) + sotien;
+        this.setTienhientai(Integer.toString(temp));
+    }
+
     @Override
     public String toString() {
         return "hello";
