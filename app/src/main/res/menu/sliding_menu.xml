@@ -3,7 +3,13 @@
 
     <item android:id="@+id/mnThemGiaoDich" android:title="Thêm Giao Dịch" />
     <item android:id="@+id/mnViTien" android:title="Ví tiền" />
-    <item android:id="@+id/mnLichSuGiaoDich" android:title="Lịch sử giao dịch" />
+
+    <item android:title="Lịch sử" android:checkableBehavior="single">
+        <menu>
+            <item android:id="@+id/mnLichSuGiaoDich" android:title="Lịch sử giao dịch" />
+            <item android:id="@+id/mnLichSuThang" android:title="Lịch sử theo tháng" />
+        </menu>
+    </item>
     <item android:id="@+id/mnChiTieuThang" android:title="Kế hoạch chi tiêu" />
     <item android:id="@+id/mnThongKe" android:title="Thống kê" />
     <item android:title="Catalogs" android:id="@+id/mnCatalog"/>

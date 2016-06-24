@@ -75,7 +75,6 @@ public class CTTAdapter extends RecyclerView.Adapter<CTTAdapter.CTTHolder> {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 DanhSachCTT.ShowCreateDialog(chiTieuThang);
             }
         });

@@ -52,12 +52,12 @@
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
@@ -254,6 +254,10 @@
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\giao_dich_item_layout.xml",
+        "source": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\src\\main\\res\\layout\\giao_dich_item_layout.xml"
     },
     {
         "merged": "D:\\WORKSPACE\\AndroidStudio\\MoneyKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",

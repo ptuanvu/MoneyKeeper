@@ -97,6 +97,7 @@ public class TinhTrangHienTai extends Fragment {
     public void Refresh() {
         Calendar calendar = Calendar.getInstance();
         curWallet = MoneyHelper.GetCurWallet();
+        tvName.setText(curWallet.getName());
         tvCurMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTienhientai())));
         tvSaveMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTiendutru())));
         tvBankMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTientietkiem())));

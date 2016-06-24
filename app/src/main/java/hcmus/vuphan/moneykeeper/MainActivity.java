@@ -30,6 +30,7 @@ import hcmus.vuphan.moneykeeper.model.Wallet;
 import hcmus.vuphan.moneykeeper.scences.CameraFragment;
 import hcmus.vuphan.moneykeeper.scences.CatalogFragment;
 import hcmus.vuphan.moneykeeper.scences.DanhSachCTT;
+import hcmus.vuphan.moneykeeper.scences.LichSuGiaoDich;
 import hcmus.vuphan.moneykeeper.scences.LichSuGiaoDichFragment;
 import hcmus.vuphan.moneykeeper.scences.ListwalletFragment;
 import hcmus.vuphan.moneykeeper.scences.LoginFragment;
@@ -148,22 +149,6 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
     }
 
     public void InitGiaoDich() {
-//        ChiTieuThang curCTT = MoneyHelper.GetChiTieuThangByMonth(MoneyHelper.GetCurrentMonth());
-//
-//        Giaodich gd1 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",100000);
-//        Giaodich gd2 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Thu",50000);
-//        Giaodich gd3 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",1000000);
-//        Giaodich gd4 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Thu",1000000);
-//        Giaodich gd5 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",5000000);
-//        Giaodich gd6 = new Giaodich("1", String.valueOf(curCTT.getId()), "3", "Giao dich tam", "Mo ta giao dich", "Dia diem", Calendar.getInstance().getTime(), "", "false","Chi",1000000);
-//
-//        gd1.save();
-//        gd2.save();
-//        gd3.save();
-//        gd4.save();
-//        gd5.save();
-//        gd6.save();
-
         Calendar calendar = Calendar.getInstance();
         Date now = calendar.getTime();
         for (int i = 0 ; i < 12; i ++) {
@@ -180,8 +165,84 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         }
     }
 
-    public void InitCatalog() {
 
+    private void CreateListenerEvent() {
+        nvLeftMenu.setNavigationItemSelectedListener(this);
+    }
+
+    private void InitID() {
+        contentFrameLayout = (FrameLayout) findViewById(R.id.contentFrameLayout);
+        nvLeftMenu = (NavigationView) findViewById(R.id.nvLeftMenu);
+        drawer = (DrawerLayout) findViewById(R.id.drawer);
+        toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        catalogFragment = CatalogFragment.createFragment(this);
+        loginFragment = LoginFragment.createFragment(this);
+        signupFragment = SignupFragment.createFragment(this);
+        listwalletFragment = ListwalletFragment.createFragment(this);
+        showwalletFragment = ShowwalletFragment.createFragment(this);
+        showListGdFragment = ShowListGdFragment.createInstance(this);
+
+    }
+
+
+
+    @Override
+    public void OnChiTieuThangDialogFinish() {
+        tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
+        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
+        InitGiaoDich();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        modeFragment = 1;
+        switch (item.getItemId()) {
+            case R.id.mnThemGiaoDich:
+                CUGiaoDich cuGiaoDich = CUGiaoDich.concreateInstance(null, this);
+                cuGiaoDich.show(getFragmentManager(), "dialog");
+                break;
+            case R.id.mnCatalog:
+                CatalogFragment catalogFragment = CatalogFragment.createFragment(this);
+                transaction.replace(R.id.contentFrameLayout, catalogFragment).commit();
+                break;
+            case R.id.mnChiTieuThang:
+                DanhSachCTT danhSachCTT = DanhSachCTT.createFragment(this);
+                transaction.replace(R.id.contentFrameLayout, danhSachCTT).commit();
+                break;
+            case R.id.mnViTien:
+                CUViTien cuViTien = CUViTien.concreateInstance(null,this);
+                cuViTien.show(getFragmentManager(),"dialog");
+                break;
+            case R.id.mnLichSuThang:
+                lichSuGiaoDichFragment= LichSuGiaoDichFragment.createInstance(this);
+                getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, lichSuGiaoDichFragment).commit();
+                break;
+            case R.id.mnLichSuGiaoDich:
+                LichSuGiaoDich lichSuGiaoDich = LichSuGiaoDich.createFragment(this);
+                transaction.replace(R.id.contentFrameLayout, lichSuGiaoDich).commit();
+                break;
+            case R.id.mnThongKe:
+                ThongKeFragment thongKeFrament = ThongKeFragment.createInstance(this);
+                getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout,thongKeFrament).commit();
+        }
+
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+        return false;
+    }
+
+
+    @Override
+    public void OnCUGiaoDichFinish() {
+        tinhTrangHienTai.Refresh();
+    }
+
+
+    public void InitCatalog() {
         Wallet newWallet = new Wallet("Ví tiền của tôi", "2000000", "500000", "0");
         newWallet.save();
 
@@ -273,76 +334,5 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         Catalog c15 = new Catalog("", "", -1L);
         Catalog c16 = new Catalog("", "", -1L);
 
-    }
-
-    private void CreateListenerEvent() {
-        nvLeftMenu.setNavigationItemSelectedListener(this);
-    }
-
-    private void InitID() {
-        contentFrameLayout = (FrameLayout) findViewById(R.id.contentFrameLayout);
-        nvLeftMenu = (NavigationView) findViewById(R.id.nvLeftMenu);
-        drawer = (DrawerLayout) findViewById(R.id.drawer);
-        toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        catalogFragment = CatalogFragment.createFragment(this);
-        loginFragment = LoginFragment.createFragment(this);
-        signupFragment = SignupFragment.createFragment(this);
-        listwalletFragment = ListwalletFragment.createFragment(this);
-        showwalletFragment = ShowwalletFragment.createFragment(this);
-        showListGdFragment = ShowListGdFragment.createInstance(this);
-
-    }
-
-
-
-    @Override
-    public void OnChiTieuThangDialogFinish() {
-        tinhTrangHienTai = TinhTrangHienTai.createInstance(this);
-        getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, tinhTrangHienTai).commit();
-        InitGiaoDich();
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        modeFragment = 1;
-        switch (item.getItemId()) {
-            case R.id.mnThemGiaoDich:
-                CUGiaoDich cuGiaoDich = CUGiaoDich.concreateInstance(null, this);
-                cuGiaoDich.show(getFragmentManager(), "dialog");
-                break;
-            case R.id.mnCatalog:
-                CatalogFragment catalogFragment = CatalogFragment.createFragment(this);
-                transaction.replace(R.id.contentFrameLayout, catalogFragment).commit();
-                break;
-            case R.id.mnChiTieuThang:
-                DanhSachCTT danhSachCTT = DanhSachCTT.createFragment(this);
-                transaction.replace(R.id.contentFrameLayout, danhSachCTT).commit();
-                break;
-            case R.id.mnViTien:
-                CUViTien cuViTien = CUViTien.concreateInstance(null,this);
-                cuViTien.show(getFragmentManager(),"dialog");
-                break;
-            case R.id.mnLichSuGiaoDich:
-                lichSuGiaoDichFragment= LichSuGiaoDichFragment.createInstance(this);
-                getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout, lichSuGiaoDichFragment).commit();
-                break;
-            case R.id.mnThongKe:
-                ThongKeFragment thongKeFrament = ThongKeFragment.createInstance(this);
-                getFragmentManager().beginTransaction().replace(R.id.contentFrameLayout,thongKeFrament).commit();
-        }
-
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-        return false;
-    }
-
-
-    @Override
-    public void OnCUGiaoDichFinish() {
-        tinhTrangHienTai.Refresh();
     }
 }
