@@ -74,8 +74,7 @@ public class TinhTrangHienTai extends Fragment {
         ChiTieuThang curCTT = null;
         for (ChiTieuThang chiTieuThang :
                 chiTieuThangs) {
-            if (chiTieuThang.getThoiGian().getMonth() == month)
-            {
+            if (chiTieuThang.getThoiGian().getMonth() == month) {
                 curCTT = chiTieuThang;
                 break;
             }
@@ -101,19 +100,14 @@ public class TinhTrangHienTai extends Fragment {
         tvCurMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTienhientai())));
         tvSaveMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTiendutru())));
         tvBankMoney.setText(MoneyHelper.MoneyParser(Integer.valueOf(curWallet.getTientietkiem())));
-
-
-
         String currentStatus = GetCurrentStatus(calendar.getTime());
         tvStatus.setText(currentStatus);
-
 
         ChiTieuThang curCTT = MoneyHelper.GetChiTieuThangByMonth(MoneyHelper.GetCurrentMonth());
         List<Giaodich> giaodiches = MoneyHelper.GetGiaoDichByChiTieuThang(curCTT.getId());
 
         int minDay = calendar.getActualMinimum(Calendar.DAY_OF_MONTH);
         int maxDay = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
 
         for (int i = minDay; i <= maxDay; i++) {
@@ -122,7 +116,6 @@ public class TinhTrangHienTai extends Fragment {
                     giaodiches) {
                 if (gd.getThoiGian().getDate() == i)
                     sum++;
-
             }
             DataPoint dp = new DataPoint(i, sum);
             series.appendData(dp, true, maxDay);
@@ -131,8 +124,8 @@ public class TinhTrangHienTai extends Fragment {
         series.setThickness(8);
         graphViewXML.addSeries(series);
         graphViewXML.setTitle("Chi tiêu tháng này");
-// set date label formatter
-        //graphViewXML.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(getActivity()));
+
+
         graphViewXML.getGridLabelRenderer().setNumHorizontalLabels(16); // only 4 because of the space
         graphViewXML.getGridLabelRenderer().setHorizontalAxisTitle("Ngày");
         graphViewXML.getGridLabelRenderer().setVerticalAxisTitle("Số lượng giao dịch");

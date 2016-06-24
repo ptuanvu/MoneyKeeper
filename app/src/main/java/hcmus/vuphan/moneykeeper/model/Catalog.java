@@ -8,11 +8,10 @@ import java.io.Serializable;
  * Created by monster on 15/06/2016.
  */
 public class Catalog extends SugarRecord implements Serializable{
-
-    public Catalog() {}
-
     String title, description;
     Long idParrent;
+
+    public Catalog() {}
 
     public Catalog(String title, String description) {
         this.title = title;

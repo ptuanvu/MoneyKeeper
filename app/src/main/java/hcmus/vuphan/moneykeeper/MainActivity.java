@@ -91,10 +91,6 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
 
         global.dfMonthAndYear.setCalendar(Calendar.getInstance());
 
-        Calendar cal = Calendar.getInstance();
-        cal.clear();
-        cal.set(Calendar.YEAR, 2000);
-        global.dfMonthAndYear.set2DigitYearStart(cal.getTime());
 
         // Khoi tao ID cho cac thanh phan
         InitID();
@@ -110,9 +106,6 @@ public class MainActivity extends AppCompatActivity implements CUChiTieuThang.Ch
         Calendar calendar = Calendar.getInstance();
         Date curDate = calendar.getTime();
         int curMonth = curDate.getMonth();
-
-        String thoigian = global.dfMonthAndYear.format(calendar.getTime());
-        Log.d("Main ACtivity", thoigian);
 
         List<ChiTieuThang> chiTieuThangs = ChiTieuThang.listAll(ChiTieuThang.class);
         Boolean haveChiTieuThang = false;

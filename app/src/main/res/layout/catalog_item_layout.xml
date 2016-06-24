@@ -33,8 +33,7 @@
                 android:id="@+id/tvTitle"
                 android:layout_toRightOf="@+id/imbIcon"
                 android:layout_alignParentTop="true"
-                android:textSize="22sp"
-                android:text="Xe co"/>
+                android:textSize="22sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -43,8 +42,7 @@
                 android:layout_below="@+id/tvTitle"
                 android:textStyle="italic"
                 android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/imbIcon"
-                android:text="Cac thu lien quan toi xe co"/>
+                android:layout_toRightOf="@+id/imbIcon" />
 
 
             <ImageButton
